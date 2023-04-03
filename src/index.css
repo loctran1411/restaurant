@@ -1,5 +1,5 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap'); */
 
 /* reset default style */
 
@@ -13,7 +13,7 @@
 
 body {
   background: #fcfcfc;
-  font-family: 'Shantell Sans', cursive;
+  /* font-family: 'Shantell Sans', cursive; */
 }
 
 h1,
