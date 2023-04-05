@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
-import logo from "../../assets/images/res-logo.png";
+import logo from "../../assets/images/logo_yen.jpg";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -61,11 +61,11 @@ const Header = () => {
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
           <div className="logo">
             <img src={logo} alt="logo" />
-            <h5>Chú Tư Tẽo</h5>
+            {/* <h5>YenLongHai</h5> */}
           </div>
 
           {/* ======= menu ======= */}
-          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
+          {/* <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
               {nav__links.map((item, index) => (
                 <NavLink
@@ -79,20 +79,37 @@ const Header = () => {
                 </NavLink>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* ======== nav right icons ========= */}
           <div className="nav__right d-flex align-items-center gap-4">
+
+            <div className="navigation" ref={menuRef} onClick={toggleMenu}>
+              <div className="menu d-flex align-items-center gap-5">
+                {nav__links.map((item, index) => (
+                  <NavLink
+                    to={item.path}
+                    key={index}
+                    className={(navClass) =>
+                      navClass.isActive ? "active__menu" : ""
+                    }
+                  >
+                    {item.display}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+
             <span className="cart__icon" onClick={toggleCart}>
               <i className="ri-shopping-basket-line"></i>
               <span className="cart__badge">{totalQuantity}</span>
             </span>
 
-            <span className="user">
+            {/* <span className="user">
               <Link to="/login">
                 <i className="ri-user-line"></i>
               </Link>
-            </span>
+            </span> */}
 
             <span className="mobile__menu" onClick={toggleMenu}>
               <i className="ri-menu-line"></i>
