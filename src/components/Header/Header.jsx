@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/images/logo_yen.jpg";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
@@ -58,7 +58,8 @@ const Header = () => {
   return (
     <header className="header" ref={headerRef}>
       <Container>
-        <div className="nav__wrapper d-flex align-items-center justify-content-between">
+        {/* <div className="nav__wrapper d-flex align-items-center justify-content-between"> */}
+        <div className="nav__wrapper d-flex justify-content-between">
           <div className="logo">
             <img src={logo} alt="logo" />
             {/* <h5>YenLongHai</h5> */}

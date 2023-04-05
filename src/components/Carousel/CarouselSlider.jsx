@@ -4,8 +4,7 @@ import './carouselSlider.css'
 
 const CarouselSlider = () => {
     return (
-        // <Carousel autoPlay interval="3000" transitionTime="2000" showThumbs={false} infiniteLoop={true}>
-        <Carousel showThumbs={false}>
+        <Carousel autoPlay interval="3000" transitionTime="2000" showThumbs={false} infiniteLoop={true}>
             <div>
                 <img alt="" src='https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80' className='carousel_img'/>
                 {/* <p className="legend">Món 1</p> */}
