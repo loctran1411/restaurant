@@ -18,7 +18,7 @@ const Carts = () => {
 
   return (
     <div className='cart__container'>
-        <ListGroup className='cart p-fixed'>
+        <ListGroup className='cart'>
             <div className="cart__close">
                 <span onClick={toggleCart}><i className='ri-close-fill'></i></span>
             </div>
