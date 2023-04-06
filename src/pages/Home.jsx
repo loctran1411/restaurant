@@ -145,7 +145,7 @@ const Home = () => {
             </Col>
 
             <Col lg='12'>
-              <div className='food__category d-flex align-items-center justify-content-center gap-4'>
+              <div className='food__category d-flex align-items-center justify-content-center'>
                 <button className={`all__btn ${category === 'ALL' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('ALL')}>Tất cả</button>
                 <button className={`d-flex align-items-center gap-2 ${category === 'BURGER' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BURGER')}><img src={foodCategoryImg01} alt="food category burger" />Burger</button>
                 <button className={`d-flex align-items-center gap-2 ${category === 'PIZZA' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('PIZZA')}><img src={foodCategoryImg02} alt="food category pizza" />Pizza</button>
