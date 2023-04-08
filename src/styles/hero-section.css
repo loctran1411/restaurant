@@ -31,8 +31,14 @@
   list-style-type: none;
 }
 
+.hero__content-info li{
+  padding: 10px 0;
+}
+
 .hero__content h5 {
-  color: white
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 10px;
 }
 
 .order__btn {

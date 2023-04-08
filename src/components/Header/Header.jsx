@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
-import logo from "../../assets/images/logo_yen.jpg";
+import logo from "../../assets/images/logo_yen.png";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -83,7 +83,7 @@ const Header = () => {
           </div> */}
 
           {/* ======== nav right icons ========= */}
-          <div className="nav__right d-flex align-items-center gap-4">
+          <div className="nav__right d-flex align-items-center gap-4 p-0">
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
               <div className="menu d-flex align-items-center gap-5">

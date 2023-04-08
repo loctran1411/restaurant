@@ -2,6 +2,7 @@
   width: 100%;
   height: 90px;
   line-height: 100px;
+  background: #2e3131;
 }
 
 /* .logo {
@@ -74,7 +75,7 @@
   position: sticky;
   top: 10px;
   left: 0;
-  background: #fff;
+  background: #2e3131;
   z-index: 99999;
   box-shadow: 5px 5px 15px -5px #fde4e4;
 }
