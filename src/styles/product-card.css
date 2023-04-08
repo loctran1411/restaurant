@@ -20,7 +20,14 @@
   }
   
   .product__content h5 {
+    display: grid;
     margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .product__content h5 a{
+    color: white;
+    font-weight: 600;
   }
   
   .product__price {

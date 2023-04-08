@@ -1,3 +1,10 @@
+.product__item{
+  height: 100%;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: #2e3131;
+}
 .cart__container {
     position: fixed;
     top: 0;
@@ -7,7 +14,7 @@
     background: rgba(0, 0, 0, 0.639);
     z-index: 99999;
   }
-  
+
   .cart {
     position: absolute;
     top: 0;

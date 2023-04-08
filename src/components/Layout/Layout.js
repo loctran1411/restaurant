@@ -5,7 +5,6 @@ import Routes from '../../routes/Routers'
 
 import Carts from '../UI/cart/Carts'
 import { useSelector } from 'react-redux'
-import CarouselSlider from '../Carousel/CarouselSlider'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Layout = () => {
@@ -13,7 +12,6 @@ const Layout = () => {
     return (
         <div>
             <Header />
-            <CarouselSlider/>
             {
                 showCart && <Carts/>
             }

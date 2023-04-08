@@ -12,6 +12,7 @@ import featureImg02 from '../assets/images/service-02.png'
 import featureImg03 from '../assets/images/service-03.png'
 
 import products from '../assets/fake-data/products.js'
+import info from '../assets/fake-data/info.js'
 
 import foodCategoryImg01 from '../assets/images/hamburger.png'
 import foodCategoryImg02 from '../assets/images/pizza.png'
@@ -21,6 +22,7 @@ import networkingImg from '../assets/images/network.png'
 
 import ProductCard from '../components/UI/product-card/ProductCard'
 import TestimonialSlider from '../components/UI/slider/TestimonialSlider'
+import CarouselSlider from '../components/Carousel/CarouselSlider'
 
 const featureData = [
   {
@@ -44,12 +46,13 @@ const Home = () => {
   const [category, setCategory] = useState("ALL")
   const [allProducts, setAllProducts] = useState(products)
   const [hotPizza, setHotPizza] = useState([])
+  const [infomation, setInfomation] = useState(info)
 
-  useEffect(()=>{
-    const filteredPizza = products.filter((i)=>i.category === 'Pizza')
-    const slicePizza = filteredPizza.slice(0,4)
+  useEffect(() => {
+    const filteredPizza = products.filter((i) => i.category === 'Pizza')
+    const slicePizza = filteredPizza.slice(0, 4)
     setHotPizza(slicePizza)
-  },[])
+  }, [])
 
   useEffect(() => {
     if (category === "ALL") {
@@ -71,14 +74,15 @@ const Home = () => {
 
   return (
     <Helmet title="Home">
+      <CarouselSlider/>
       <section>
         <Container>
           <Row>
             <Col lg='6' md='6'>
-              <div className="hero__content">
+              {/* <div className="hero__content">
                 <h5 className='mb-3'>Đặt món nhanh chóng</h5>
                 <h1 className='mb-4 hero__title'><span>Bạn đang đói?<br /></span> Chỉ cần đợi <span>trong giây lát</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, repellendus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit.</p>
 
                 <div className="hero__btns d-flex align-items-center gap-5">
                   <button className="order__btn d-flex align-items-center justify-content-between">Order now
@@ -92,12 +96,42 @@ const Home = () => {
 
                   <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-shield-check-line'></i></span>Giao hàng uy tín</p>
                 </div>
-              </div>
+              </div> */}
+              {
+                infomation?.map((i, index) => (
+                  <div className="hero__content" key={index}>
+                    <h5>&#127754; {i.title}</h5>
+                    <ul className="hero__content-info">
+                      <li>&#10024; {i.title_2}</li>
+                      <li>&#10024; {i.title_3}</li>
+                      <li>&#10024; {i.title_4}</li>
+                      <li>&#10024; {i.title_5}</li>
+                    </ul>
+
+                    <div className="hero__btns d-flex align-items-center gap-5">
+
+                      <button className='all__foods-btn'><Link to='/foods'>Menu &#128220;</Link></button>
+                    </div>
+
+                    {/* <div className='hero__service d-flex align-items-center gap-5 mt-5'>
+                      <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-car-line'></i></span>Free ship</p>
+
+                      <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-shield-check-line'></i></span>Giao hàng uy tín</p>
+                    </div> */}
+                  </div>
+                ))
+              }
             </Col>
 
             <Col lg='6' md='6'>
               <div className="hero__img">
-                <img src={heroImg} alt="hero-img" className="w-100" />
+
+                {/* <img src={heroImg} alt="hero-img" className="w-100" /> */}
+                <div>
+                <img src={heroImg} alt="hero-img" className="img_bg" />
+                <img src={heroImg} alt="hero-img" className="img_front" />
+                </div>
+
               </div>
             </Col>
           </Row>
@@ -207,9 +241,9 @@ const Home = () => {
               <h2>Hot Pizza</h2>
             </Col>
             {
-              hotPizza.map((i)=>(
-                <Col lg='3' md='4' key={i.id}>
-                  <ProductCard i={i}/>
+              hotPizza.map((i) => (
+                <Col lg='3' md='4' key={i.id} className='p-2'>
+                  <ProductCard i={i} />
                 </Col>
               ))
             }
@@ -225,11 +259,11 @@ const Home = () => {
                 <h5 className='testimonial__subtitle mb-4'>Testimonial</h5>
                 <h2 className='testimonial__title mb-4'>Đánh giá từ <span>khách hàng</span> đến chúng tôi</h2>
                 <p className='testimonial__desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint ad odit delectus consequuntur enim, dicta cupiditate saepe id praesentium ex.</p>
-                <TestimonialSlider/>
+                <TestimonialSlider />
               </div>
             </Col>
             <Col lang='6' md='6'>
-              <img src={networkingImg} alt="testimonial img" className='w-100'/>
+              <img src={networkingImg} alt="testimonial img" className='w-100' />
             </Col>
           </Row>
         </Container>
