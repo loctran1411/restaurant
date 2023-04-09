@@ -1,11 +1,11 @@
 .footer {
   padding-top: 50px;
   padding-bottom: 30px;
-  background: #fde4e4;
+  background: #2e3131;
 }
 
 .footer__logo img {
-  width: calc(100% - 80%);
+  width: calc(100% - 60%);
   margin-bottom: 5px;
 }
 
@@ -13,12 +13,14 @@
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 15px;
+  color: #e7b451;
 }
 
 .footer__logo p {
   font-size: 0.9rem;
-  color: #333;
+  color: #e7b451;
   line-height: 28px;
+  font-weight: 500;
 }
 
 .delivery__time-item {
@@ -28,16 +30,20 @@
 .delivery__time-item span {
   font-weight: 600;
   font-size: 1rem;
-  color: #212245;
+  color: #fff;
 }
 
 .delivery__time-item p {
-  color: #212245;
+  color: #fff;
 }
 .footer__title {
   font-size: 1.1rem;
-  color: #212245;
+  color: #fff;
   font-weight: 600;
+}
+
+.footer__hasgtag{
+  color: #338fff;
 }
 
 .newsletter {
@@ -83,6 +89,10 @@
 .copyright__text {
   font-size: 0.8rem;
   color: #df2020;
+}
+
+.hello__footer{
+  text-align: center;
 }
 
 @media only screen and (max-width: 992px) {

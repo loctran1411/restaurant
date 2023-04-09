@@ -5,7 +5,7 @@ import heroImg from '../assets/images/hero.png'
 import '../styles/hero-section.css'
 import '../styles/home.css'
 import { Link } from 'react-router-dom'
-import Category from '../components/UI/category/Category'
+// import Category from '../components/UI/category/Category'
 
 import featureImg01 from '../assets/images/service-01.png'
 import featureImg02 from '../assets/images/service-02.png'
@@ -23,6 +23,7 @@ import networkingImg from '../assets/images/network.png'
 import ProductCard from '../components/UI/product-card/ProductCard'
 import TestimonialSlider from '../components/UI/slider/TestimonialSlider'
 import CarouselSlider from '../components/Carousel/CarouselSlider'
+import Menu from '../components/UI/menu/Menu'
 
 const featureData = [
   {
@@ -74,7 +75,7 @@ const Home = () => {
 
   return (
     <Helmet title="Home">
-      <CarouselSlider/>
+      <CarouselSlider />
       <section>
         <Container>
           <Row>
@@ -110,7 +111,7 @@ const Home = () => {
 
                     <div className="hero__btns d-flex align-items-center gap-5">
 
-                      <button className='all__foods-btn'><Link to='/foods'>Menu &#128220;</Link></button>
+                      {/* <button className='all__foods-btn'><Link to='/foods'>Menu &#128220;</Link></button> */}
                     </div>
 
                     {/* <div className='hero__service d-flex align-items-center gap-5 mt-5'>
@@ -128,8 +129,8 @@ const Home = () => {
 
                 {/* <img src={heroImg} alt="hero-img" className="w-100" /> */}
                 <div>
-                <img src={heroImg} alt="hero-img" className="img_bg" />
-                <img src={heroImg} alt="hero-img" className="img_front" />
+                  <img src={heroImg} alt="hero-img" className="img_bg" />
+                  <img src={heroImg} alt="hero-img" className="img_front" />
                 </div>
 
               </div>
@@ -139,7 +140,10 @@ const Home = () => {
       </section>
 
       <section className="pt-0">
-        <Category />
+      <Col lg='12' className='text-center'>
+      <h2 className="menu__title">Thực đơn &#128220;</h2>
+      </Col>
+        <Menu />
       </section>
 
       <section>
@@ -256,8 +260,8 @@ const Home = () => {
           <Row>
             <Col lg='6' md='6'>
               <div className='testimonial'>
-                <h5 className='testimonial__subtitle mb-4'>Testimonial</h5>
-                <h2 className='testimonial__title mb-4'>Đánh giá từ <span>khách hàng</span> đến chúng tôi</h2>
+                {/* <h5 className='testimonial__subtitle mb-4'>Testimonial</h5> */}
+                <h2 className='testimonial__title mb-4'>Trải Nghiệm và Đánh giá từ <span>Khách Hàng</span> đến với chúng tôi</h2>
                 <p className='testimonial__desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint ad odit delectus consequuntur enim, dicta cupiditate saepe id praesentium ex.</p>
                 <TestimonialSlider />
               </div>

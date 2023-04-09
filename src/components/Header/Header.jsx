@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/images/logo_yen.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
@@ -18,10 +18,10 @@ const nav__links = [
     display: "Thực đơn",
     path: "/foods",
   },
-  {
-    display: "Giỏ hàng",
-    path: "/cart",
-  },
+  // {
+  //   display: "Giỏ hàng",
+  //   path: "/cart",
+  // },
   {
     display: "Liên hệ",
     path: "/contact",
@@ -61,32 +61,15 @@ const Header = () => {
         {/* <div className="nav__wrapper d-flex align-items-center justify-content-between"> */}
         <div className="nav__wrapper d-flex justify-content-between">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <Link to={'/'}><img src={logo} alt="logo" /></Link>
             {/* <h5>YenLongHai</h5> */}
           </div>
-
-          {/* ======= menu ======= */}
-          {/* <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-            <div className="menu d-flex align-items-center gap-5">
-              {nav__links.map((item, index) => (
-                <NavLink
-                  to={item.path}
-                  key={index}
-                  className={(navClass) =>
-                    navClass.isActive ? "active__menu" : ""
-                  }
-                >
-                  {item.display}
-                </NavLink>
-              ))}
-            </div>
-          </div> */}
 
           {/* ======== nav right icons ========= */}
           <div className="nav__right d-flex align-items-center gap-4 p-0">
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
-              <div className="menu d-flex align-items-center gap-5">
+              <div className="menu d-flex align-items-center gap-5 menu__tab">
                 {nav__links.map((item, index) => (
                   <NavLink
                     to={item.path}
@@ -101,10 +84,10 @@ const Header = () => {
               </div>
             </div>
 
-            <span className="cart__icon" onClick={toggleCart}>
+            {/* <span className="cart__icon" onClick={toggleCart}>
               <i className="ri-shopping-basket-line"></i>
               <span className="cart__badge">{totalQuantity}</span>
-            </span>
+            </span> */}
 
             {/* <span className="user">
               <Link to="/login">

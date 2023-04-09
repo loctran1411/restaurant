@@ -10,9 +10,9 @@
 } */
 
 .logo img {
-  width: calc(100% - 60%);
+  width: calc(100% - 50%);
   object-fit: contain;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 
 .logo h5 {
@@ -26,23 +26,23 @@
 .menu a {
   font-weight: 600;
   font-size: 1rem;
-  color: #212245;
+  color: #fff;
   transition: 0.3s;
 }
 
 .menu a:hover {
-  color: #df2020;
+  color: #e7b451;
 }
 
 .active__menu {
-  color: #df2020 !important;
+  color: #e7b451 !important;
 }
 
 .cart__icon i,
 .user i,
 .mobile__menu i {
   font-size: 1.3rem;
-  color: #212245;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -73,11 +73,12 @@
 
 .header__shrink {
   position: sticky;
-  top: 10px;
+  top: 0px;
   left: 0;
   background: #2e3131;
   z-index: 99999;
   box-shadow: 5px 5px 15px -5px #fde4e4;
+  /* visibility: hidden; */
 }
 
 @media only screen and (max-width: 992px) {

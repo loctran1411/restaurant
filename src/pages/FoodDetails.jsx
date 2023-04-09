@@ -82,7 +82,7 @@ const FoodDetails = () => {
                 <h2 className="product__title mb-3">{title}</h2>
                 <p className="product__price">Giá: <span>{price}đ</span></p>
                 <p className='category mb-5'>Menu: <span>{category}</span></p>
-                <button onClick={addToCart} className='addToCart__btn'>Thêm vào giỏ hàng</button>
+                {/* <button onClick={addToCart} className='addToCart__btn'>Thêm vào giỏ hàng</button> */}
               </div>
             </Col>
 

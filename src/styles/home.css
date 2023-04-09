@@ -6,7 +6,7 @@
   color: #df2020;
 }
 
-.feature__text {
+.feature__text, .menu__title {
   color: white;
 }
 
@@ -59,7 +59,7 @@
   background: #2e3131;
   color: white;
   margin: 5px;
-  border: 2px solid white !important;
+  /* border: 2px solid white !important; */
   border-radius: 20px;
 }
 
@@ -93,6 +93,9 @@
 .testimonial__desc {
   color: #fff;
   line-height: 30px;
+}
+.show__menu .menu__tab{
+  background-color:#2e3131;
 }
 @media only screen and (max-width: 768px) {
   .hero__content h5 {
