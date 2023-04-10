@@ -2,31 +2,33 @@ import React, { useRef, useEffect } from "react";
 
 import { Container } from "reactstrap";
 import logo from "../../assets/images/logo_yen.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, BrowserRouter as Router } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
 
+import { Navbar, Nav } from "react-bootstrap";
+
 import "../../styles/header.css";
 
-const nav__links = [
-  {
-    display: "Trang chủ",
-    path: "/home",
-  },
-  {
-    display: "Thực đơn",
-    path: "/foods",
-  },
-  // {
-  //   display: "Giỏ hàng",
-  //   path: "/cart",
-  // },
-  {
-    display: "Liên hệ",
-    path: "/contact",
-  },
-];
+// const nav__links = [
+//   {
+//     display: "Trang chủ",
+//     path: "/home",
+//   },
+//   {
+//     display: "Thực đơn mới",
+//     path: "/foods",
+//   },
+//   {
+//     display: "Giỏ hàng",
+//     path: "/cart",
+//   },
+//   {
+//     display: "Liên hệ",
+//     path: "/contact",
+//   },
+// ];
 
 const Header = () => {
   const menuRef = useRef(null);
@@ -70,7 +72,7 @@ const Header = () => {
 
             <div className="navigation" ref={menuRef} onClick={toggleMenu}>
               <div className="menu d-flex align-items-center gap-5 menu__tab">
-                {nav__links.map((item, index) => (
+                {/* {nav__links.map((item, index) => (
                   <NavLink
                     to={item.path}
                     key={index}
@@ -80,7 +82,16 @@ const Header = () => {
                   >
                     {item.display}
                   </NavLink>
-                ))}
+                ))} */}
+                <Navbar>
+                  <Nav className="nav-bar">
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#home">Giới thiệu</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#foods">Thực đơn</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#bestseller">Món bán chạy</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#service">Dịch vụ</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#contact">Liên hệ</Nav.Link>
+                  </Nav>
+                </Navbar>
               </div>
             </div>
 

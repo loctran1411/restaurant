@@ -3,10 +3,23 @@
   object-fit: cover;
 }
 
+.carousel .slide .sub_carousel_img {
+  width: 90%;
+  height: 350px;
+  object-fit: fill;
+  border-radius: 30px;
+}
+
 @media only screen and (max-width: 992px) {
   .carousel .slide img {
     height: 55vh;
     object-fit: fill;
+  }
+
+  .carousel .slide .sub_carousel_img {
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
   }
 }
 
@@ -14,5 +27,11 @@
   .carousel .slide img {
     height: 35vh;
     object-fit: fill;
+  }
+
+  .carousel .slide .sub_carousel_img {
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
   }
 }

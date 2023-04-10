@@ -23,6 +23,7 @@ import networkingImg from '../assets/images/network.png'
 import ProductCard from '../components/UI/product-card/ProductCard'
 import TestimonialSlider from '../components/UI/slider/TestimonialSlider'
 import CarouselSlider from '../components/Carousel/CarouselSlider'
+import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
 import Menu from '../components/UI/menu/Menu'
 
 const featureData = [
@@ -76,28 +77,10 @@ const Home = () => {
   return (
     <Helmet title="Home">
       <CarouselSlider />
-      <section>
+      <section id="home">
         <Container>
-          <Row>
-            <Col lg='6' md='6'>
-              {/* <div className="hero__content">
-                <h5 className='mb-3'>Đặt món nhanh chóng</h5>
-                <h1 className='mb-4 hero__title'><span>Bạn đang đói?<br /></span> Chỉ cần đợi <span>trong giây lát</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit.</p>
-
-                <div className="hero__btns d-flex align-items-center gap-5">
-                  <button className="order__btn d-flex align-items-center justify-content-between">Order now
-                    <i className='ri-arrow-right-s-line'></i></button>
-
-                  <button className='all__foods-btn'><Link to='/foods'>See all foods</Link></button>
-                </div>
-
-                <div className='hero__service d-flex align-items-center gap-5 mt-5'>
-                  <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-car-line'></i></span>Free ship</p>
-
-                  <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-shield-check-line'></i></span>Giao hàng uy tín</p>
-                </div>
-              </div> */}
+          <div className="hero">
+            <div class="hero__content">
               {
                 infomation?.map((i, index) => (
                   <div className="hero__content" key={index}>
@@ -110,43 +93,57 @@ const Home = () => {
                     </ul>
 
                     <div className="hero__btns d-flex align-items-center gap-5">
-
-                      {/* <button className='all__foods-btn'><Link to='/foods'>Menu &#128220;</Link></button> */}
                     </div>
-
-                    {/* <div className='hero__service d-flex align-items-center gap-5 mt-5'>
-                      <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-car-line'></i></span>Free ship</p>
-
-                      <p className='d-flex align-items-center gap-2'><span className='shipping__icon'><i className='ri-shield-check-line'></i></span>Giao hàng uy tín</p>
-                    </div> */}
                   </div>
                 ))
               }
+            </div>
+
+            <div className="hero__img">
+              <div>
+                <SubCarouselSlider />
+              </div>
+
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="pt-0" id='foods'>
+        <Col lg='12' className='text-center'>
+          <h2 className="menu__title">Thực đơn &#128220;</h2>
+        </Col>
+        <Menu />
+      </section>
+
+      <section id="bestseller">
+        <Container>
+          <Row>
+            <Col lg='12' className='text-center'>
+              <h2>Món bán chạy</h2>
             </Col>
 
-            <Col lg='6' md='6'>
-              <div className="hero__img">
-
-                {/* <img src={heroImg} alt="hero-img" className="w-100" /> */}
-                <div>
-                  <img src={heroImg} alt="hero-img" className="img_bg" />
-                  <img src={heroImg} alt="hero-img" className="img_front" />
-                </div>
-
+            <Col lg='12'>
+              <div className='food__category d-flex align-items-center justify-content-center'>
+                <button className={`all__btn ${category === 'ALL' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('ALL')}>Tất cả</button>
+                <button className={`d-flex align-items-center gap-2 ${category === 'BURGER' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BURGER')}><img src={foodCategoryImg01} alt="food category burger" />Burger</button>
+                <button className={`d-flex align-items-center gap-2 ${category === 'PIZZA' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('PIZZA')}><img src={foodCategoryImg02} alt="food category pizza" />Pizza</button>
+                <button className={`d-flex align-items-center gap-2 ${category === 'BREAD' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BREAD')}><img src={foodCategoryImg03} alt="food category bread" />Bánh mì</button>
               </div>
             </Col>
+
+            {
+              allProducts.map((i) => (
+                <Col lg='3' md='4' sm='6' xs='6' key={i.id} className='mt-5'>
+                  <ProductCard i={i} />
+                </Col>
+              ))
+            }
           </Row>
         </Container>
       </section>
 
-      <section className="pt-0">
-      <Col lg='12' className='text-center'>
-      <h2 className="menu__title">Thực đơn &#128220;</h2>
-      </Col>
-        <Menu />
-      </section>
-
-      <section>
+      <section id="service">
         <Container>
           <Row>
             <Col lg='12' className='text-center'>
@@ -171,33 +168,6 @@ const Home = () => {
               ))
             }
 
-          </Row>
-        </Container>
-      </section>
-
-      <section>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center'>
-              <h2>Món bán chạy</h2>
-            </Col>
-
-            <Col lg='12'>
-              <div className='food__category d-flex align-items-center justify-content-center'>
-                <button className={`all__btn ${category === 'ALL' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('ALL')}>Tất cả</button>
-                <button className={`d-flex align-items-center gap-2 ${category === 'BURGER' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BURGER')}><img src={foodCategoryImg01} alt="food category burger" />Burger</button>
-                <button className={`d-flex align-items-center gap-2 ${category === 'PIZZA' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('PIZZA')}><img src={foodCategoryImg02} alt="food category pizza" />Pizza</button>
-                <button className={`d-flex align-items-center gap-2 ${category === 'BREAD' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BREAD')}><img src={foodCategoryImg03} alt="food category bread" />Bánh mì</button>
-              </div>
-            </Col>
-
-            {
-              allProducts.map((i) => (
-                <Col lg='3' md='4' sm='6' xs='6' key={i.id} className='mt-5'>
-                  <ProductCard i={i} />
-                </Col>
-              ))
-            }
           </Row>
         </Container>
       </section>
