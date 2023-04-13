@@ -77,7 +77,8 @@ const Home = () => {
   return (
     <Helmet title="Home">
       <CarouselSlider />
-      <section id="home">
+      <section id="home"></section>
+      <section>
         <Container>
           <div className="hero">
             <div class="hero__content">
@@ -109,14 +110,17 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="pt-0" id='foods'>
+      <section id='foods'></section>
+
+      <section className="pt-0" >
         <Col lg='12' className='text-center'>
-          <h2 className="menu__title">Thực đơn &#128220;</h2>
+          {/* <h2 className="menu__title">Thực đơn &#128220;</h2> */}
         </Col>
         <Menu />
       </section>
 
-      <section id="bestseller">
+      <section id="bestseller"></section>
+      <section>
         <Container>
           <Row>
             <Col lg='12' className='text-center'>
@@ -143,7 +147,8 @@ const Home = () => {
         </Container>
       </section>
 
-      <section id="service">
+      <section id="service"></section>
+      <section>
         <Container>
           <Row>
             <Col lg='12' className='text-center'>

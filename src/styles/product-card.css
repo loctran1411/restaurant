@@ -14,12 +14,13 @@
   transform: scale(1.2);
 }
 
-.product__content h5 a {
+/* .product__content h5 a {
   color: #212245;
   font-size: 1rem;
-}
+} */
 
 .product__content h5 {
+  color: white;
   display: grid;
   margin-bottom: 30px;
   width: 100%;
