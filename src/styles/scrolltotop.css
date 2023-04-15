@@ -38,7 +38,7 @@
     flex-direction: column;
 }
 
-.multi-btn div {
+/* .multi-btn div {
     background: #9a9a9a;
     padding: 10px;
     margin: 0 0 15px 0;
@@ -48,7 +48,7 @@
 
 .multi-btn div:hover {
     background: #fff;
-}
+} */
 
 .icon-btn {
     font-size: 25px;
@@ -60,7 +60,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgb(0 0 0 / 83%) !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +89,8 @@
 .modal-content {
     width: 80% !important;
     min-height: 200px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgb(255 255 255 / 55%);
     padding: 25px;
 }
 
@@ -118,7 +119,7 @@
 .form-inp .btn-submit {
     width: 20%;
     border: none;
-    background: #b1b96e;
+    background-color: rgb(217 176 58);
     border-radius: 5px;
     padding: 5px;
     font-weight: 700;
@@ -130,6 +131,25 @@
     margin: 10px;
     border-radius: 10px;
     border: 1px solid #000;
+}
+
+/* floating button */
+.fab-container {
+    right: 3vw !important;
+    bottom: 3vh !important;
+}
+
+/* .fab-container .btn-icon{
+    background-color: #000 !important;
+} */
+
+.float-button button .float-icon-plus {
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.float-button button .float-icon-plus:hover {
+    transform: rotate(45deg) !important;
 }
 
 /*=============== BREAKPOINTS ===============*/
