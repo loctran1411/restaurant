@@ -25,6 +25,7 @@ import TestimonialSlider from '../components/UI/slider/TestimonialSlider'
 import CarouselSlider from '../components/Carousel/CarouselSlider'
 import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
 import Menu from '../components/UI/menu/Menu'
+import Form from '../components/Form/Form'
 
 const featureData = [
   {
@@ -246,6 +247,10 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      <section>
+        <Form/>
       </section>
 
     </Helmet>

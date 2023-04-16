@@ -143,13 +143,60 @@
     background-color: #000 !important;
 } */
 
-.float-button button .float-icon-plus {
-    font-size: 50px;
-    transition: 0.5s;
+.tooltip-btn {
+    background-color: rgb(244, 67, 54);
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    margin: 20px auto 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 50%;
 }
 
-.float-button button .float-icon-plus:hover {
-    transform: rotate(45deg) !important;
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1 !important;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    height: 35px;
+    background-color: #fba81d;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    transition: .25s all ease;
+    transition-delay: .25s;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 200%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 100%;
+    margin-left: 0px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fba81d transparent transparent transparent;
+    transform: rotate(-90deg);
 }
 
 /*=============== BREAKPOINTS ===============*/
