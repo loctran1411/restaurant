@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
 import Helmet from '../components/Helmet/Helmet'
-import heroImg from '../assets/images/hero.png'
 import '../styles/hero-section.css'
 import '../styles/home.css'
-import { Link } from 'react-router-dom'
-// import Category from '../components/UI/category/Category'
 
 import featureImg01 from '../assets/images/service-01.png'
 import featureImg02 from '../assets/images/service-02.png'
@@ -13,10 +10,6 @@ import featureImg03 from '../assets/images/service-03.png'
 
 import products from '../assets/fake-data/products.js'
 import info from '../assets/fake-data/info.js'
-
-import foodCategoryImg01 from '../assets/images/hamburger.png'
-import foodCategoryImg02 from '../assets/images/pizza.png'
-import foodCategoryImg03 from '../assets/images/bread.png'
 import whyImg from '../assets/images/location.png'
 import networkingImg from '../assets/images/network.png'
 
@@ -26,6 +19,8 @@ import CarouselSlider from '../components/Carousel/CarouselSlider'
 import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
 import Menu from '../components/UI/menu/Menu'
 import Form from '../components/Form/Form'
+import CollapseMenu from '../components/CollapseMenu/CollapseMenu'
+import { menu, name_list_menu } from '../assets/fake-data/menu'
 
 const featureData = [
   {
@@ -44,6 +39,8 @@ const featureData = [
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quisquam.',
   }
 ]
+
+
 
 const Home = () => {
   const [category, setCategory] = useState("ALL")
@@ -115,12 +112,11 @@ const Home = () => {
 
       <section className="pt-0" >
         <Col lg='12' className='text-center'>
-          {/* <h2 className="menu__title">Thực đơn &#128220;</h2> */}
         </Col>
         <Menu />
       </section>
 
-      <section id="bestseller"></section>
+      {/* <section id="bestseller"></section>
       <section>
         <Container>
           <Row>
@@ -146,6 +142,20 @@ const Home = () => {
             }
           </Row>
         </Container>
+      </section> */}
+
+      <section>
+        <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca}/>
+
+        <CollapseMenu menu={menu.cahap} name_list_menu={name_list_menu.cate_cahap}/>
+
+        <CollapseMenu menu={menu.ghe} name_list_menu={name_list_menu.cate_ghe}/>
+
+        <CollapseMenu menu={menu.oc} name_list_menu={name_list_menu.cate_oc}/>
+
+        <CollapseMenu menu={menu.mongtay} name_list_menu={name_list_menu.cate_mongtay}/>
+
+        <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau}/>
       </section>
 
       <section id="service"></section>
@@ -250,7 +260,7 @@ const Home = () => {
       </section>
 
       <section>
-        <Form/>
+        <Form />
       </section>
 
     </Helmet>

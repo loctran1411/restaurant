@@ -19,7 +19,10 @@ const AllFoods = () => {
   const searchedProduct = products.filter((i) => {
     if (searchItem.value === '') {return i}
     if (i.title.toLowerCase().includes(searchItem.toLowerCase())) {return i}
-    else {console.log('Không tìm thấy sản phẩm')}
+    else {
+      alert('Không tìm thấy sản phẩm')
+      console.log('Không tìm thấy sản phẩm')
+  }
   })
 
   const productPerPage = 8 // số item trong 1 page

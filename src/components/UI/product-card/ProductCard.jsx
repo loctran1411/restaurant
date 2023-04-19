@@ -9,7 +9,7 @@ import { Col, Container, Row } from 'reactstrap'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 const ProductCard = (props) => {
-    const [modalShown, toggleModal] = useState(false);
+    // const [modalShown, toggleModal] = useState(false); //show popup food detail
     const { id, title, image01, price } = props.i //các thành phần trong products được props thông qua biến i
     const dispatch = useDispatch();
 
@@ -51,9 +51,9 @@ const ProductCard = (props) => {
 
             <div className="product__content">
                 {/* <h5 className="product_name"><Link to={`/foods/${id}`}>{title}</Link></h5> */}
-                <h5 className="product_name" onClick={() => {
-                    toggleModal(!modalShown);
-                }}>{title}</h5>
+                <h5 className="product_name" 
+                // onClick={() => {toggleModal(!modalShown);}}
+                >{title}</h5>
                 <div className='d-flex align-items-center justify-content-between'>
                     <span className='product__price'>{price}đ</span>
                     {/* <button className='addToCart__btn' onClick={addToCart}>
@@ -62,7 +62,7 @@ const ProductCard = (props) => {
                 </div>
             </div>
 
-            <Modal
+            {/* <Modal
                 shown={modalShown}
                 close={() => {
                     toggleModal(false);
@@ -77,7 +77,7 @@ const ProductCard = (props) => {
                             price={price} />
                     </Container>
                 </Col>
-            </Modal>
+            </Modal> */}
         </div>
     )
 }

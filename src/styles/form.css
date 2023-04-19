@@ -32,9 +32,9 @@
     flex-direction: row;
 }
 
-.date-time-place .form-inp-item{
+/* .date-time-place .form-inp-item{
     padding: 0 10px;
-}
+} */
 
 @media only screen and (max-width: 992px) {}
 

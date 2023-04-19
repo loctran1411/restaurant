@@ -1,0 +1,98 @@
+.collapse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.toggle-button-header_title {
+    text-transform: capitalize
+}
+
+.toggle-button, .toggle-button_active {
+    width: 60%;
+    background-color: transparent;
+    border: 2px solid #e7b451;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    margin: 0 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+}
+
+.toggle-button_active {
+    background: #ffbf6966 !important;
+}
+
+.toggle-button .toggle-button-header,
+.toggle-button_active .toggle-button-header {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+
+.toggle-button .toggle-button-icon,
+.toggle-button_active .toggle-button-icon {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.toggle-button-icon_active {
+    margin: 5px;
+    font-size: 20px;
+    transform: rotate(45deg);
+}
+
+.collapse-menu-content {
+    background: #ffbf6966;
+    border-radius: 15px;
+    margin: 0 0 20px 0;
+}
+
+.content-detail {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.content-detail img {
+    width: 200px;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.content-detail h5,
+h6 {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.content-detail h5 {
+    font-weight: 600;
+}
+
+.content-detail .name-price-food {
+    width: 100%;
+    padding: 10px;
+}
+
+.close-collapse {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.close-collapse button {
+    padding: 5px 25px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.close-collapse button:hover {
+    background: #c5653b;
+}

@@ -50,7 +50,7 @@ const Form = () => {
                                     <label className="form-inp-label" htmlFor="date">Ngày</label>
                                     <input className='inp' type="date" name="Date" id="date" lang="vi-VN" />
                                 </div>
-
+                                &emsp;&nbsp;
                                 <div className="form-inp-item">
                                     <label className="form-inp-label" htmlFor="time">Giờ</label>
                                     <input className='inp' type="time" name="Time" id="time" lang="vi-VN" />
