@@ -20,17 +20,17 @@ const CollapseMenu = ({ menu, name_list_menu }) => {
                         </div>
                     ))
                 }
-                <div className="toggle-button-header">
+                <div className="toggle-button-header_icon">
                     <AiOutlinePlus className={openCollapse ? 'toggle-button-icon_active' : 'toggle-button-icon'} />
                 </div>
             </button>
             {openCollapse && (
                 <>
                     <Container className='collapse-menu-content'>
-                        <Row>
+                        <Row className='collapse-menu-content_row'>
                             {
                                 menu.map((data) => (
-                                    <Col lg='6' md='6' sm='6' xs='6' key={data.id}>
+                                    <Col lg='6' md='6' sm='6' xs='6' key={data.id} className='collapse-menu-content_item'>
                                         <div className="content-detail">
                                             <img src={data.img} alt="food-img" />
                                             <div className='name-price-food'>

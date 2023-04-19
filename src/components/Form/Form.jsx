@@ -50,7 +50,6 @@ const Form = () => {
                                     <label className="form-inp-label" htmlFor="date">Ngày</label>
                                     <input className='inp' type="date" name="Date" id="date" lang="vi-VN" />
                                 </div>
-                                &emsp;&nbsp;
                                 <div className="form-inp-item">
                                     <label className="form-inp-label" htmlFor="time">Giờ</label>
                                     <input className='inp' type="time" name="Time" id="time" lang="vi-VN" />
@@ -58,8 +57,8 @@ const Form = () => {
                             </div>
 
                             <div className="form-inp-item">
-                                <label className="form-inp-label" htmlFor="note">Ghi chú khách hàng</label>
-                                <textarea className='inp' name="Note" id="note" cols="10" rows="10" placeholder="Ghi chú"></textarea>
+                                <label className="form-inp-label" htmlFor="note">Yêu cầu khác</label>
+                                <textarea className='inp' name="Note" id="note" cols="10" rows="10" placeholder="..."></textarea>
                             </div>
 
                             <input className='btn-submit' name="Name" type="submit" value={loading ? "Vui lòng chờ..." : "Gửi"} />

@@ -9,8 +9,13 @@
     text-transform: capitalize
 }
 
-.toggle-button, .toggle-button_active {
-    width: 60%;
+.toggle-button-header {
+    width: 100%;
+}
+
+.toggle-button,
+.toggle-button_active {
+    width: 80%;
     background-color: transparent;
     border: 2px solid #e7b451;
     color: #fff;
@@ -24,13 +29,6 @@
 
 .toggle-button_active {
     background: #ffbf6966 !important;
-}
-
-.toggle-button .toggle-button-header,
-.toggle-button_active .toggle-button-header {
-    width: 50%;
-    display: flex;
-    justify-content: right;
 }
 
 .toggle-button .toggle-button-icon,
@@ -96,3 +94,32 @@ h6 {
 .close-collapse button:hover {
     background: #c5653b;
 }
+
+
+@media only screen and (max-width: 992px) {
+    .content-detail img {
+        width: 150px;
+        height: auto;
+    }
+
+    .content-detail h5 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (max-width: 576px) {
+    .collapse-menu-content_row {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .collapse-menu-content_item{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 350px) {}

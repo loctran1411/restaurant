@@ -26,14 +26,14 @@ const MultipleButton = () => {
                     </Link>
                 </div>
 
-                <div className="tooltip-btn">
+                {/* <div className="tooltip-btn">
                     <div class="tooltip">
                         <BsFillShareFill className='icon-btn' />
                         <span class="tooltiptext">
                             <div><a href="https://www.facebook.com/Nhà-Hàng-Yến-Long-Hải-101799236121370/" target="_blank">Facebook</a></div>
                         </span>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     )

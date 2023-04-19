@@ -125,13 +125,13 @@
     font-weight: 700;
 }
 
-.form-inp .inp {
+/* .form-inp .inp {
     width: 100%;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
     border: 1px solid #000;
-}
+} */
 
 /* floating button */
 .fab-container {
@@ -264,9 +264,9 @@
         padding: 20px;
     }
 
-    .form-inp .inp {
+    /* .form-inp .inp {
         width: auto;
-    }
+    } */
 
     .form-inp .btn-submit {
         width: 100%;
