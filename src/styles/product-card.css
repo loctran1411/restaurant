@@ -103,9 +103,9 @@
   }
 
   .product__img img {
-    width: 150px;
-    height: 90px;
+    height: 55px;
     margin: 0;
+    width: 100px;
   }
 
   .product__content {
