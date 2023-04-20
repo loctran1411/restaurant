@@ -35,6 +35,8 @@ const Menu = () => {
             <h2 className="menu__title">Thực đơn &#128220;</h2>
             <Container>
                 <Row>
+                <Col lg='6' md='6' sm='6' >
+                    </Col>
                     <Col lg='6' md='6' sm='6' xs='12' className='mb-3'>
                         <div className="search__widget d-flex align-items-center justify-content-between" style={{backgroundColor:'#fff'}}>
                             <input type="text" placeholder='Tìm món ăn....' value={searchItem} onChange={(e) => setSearchItem(e.target.value)} style={{width:'100%', backgroundColor:'#fff'}}/>
@@ -42,13 +44,10 @@ const Menu = () => {
                         </div>
                     </Col>
 
-                    <Col lg='6' md='6' sm='6' >
-                    </Col>
-
                     {
                         displayPage
                             .map((i) => (
-                                <Col lg='3' md='4' sm='6' xs='6' key={i.id} className='mb-4'>
+                                <Col lg='6' md='4' sm='6' xs='6' key={i.id} className='mb-4'>
                                     <ProductCard i={i} />
                                 </Col>
                             ))
@@ -58,8 +57,8 @@ const Menu = () => {
                         <ReactPaginate
                             pageCount={pageCount}
                             onPageChange={changePage}
-                            previousLabel={'Prev'}
-                            nextLabel={"Next"}
+                            previousLabel={'<<<'}
+                            nextLabel={">>>"}
                             containerClassName="paginationBttns"
                         />
                     </div>

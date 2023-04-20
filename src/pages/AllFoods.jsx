@@ -17,7 +17,7 @@ const AllFoods = () => {
 
   // filter search item
   const searchedProduct = products.filter((i) => {
-    if (searchItem.value === '') {return i}
+    if (searchItem.valueOf === '') {return i}
     if (i.title.toLowerCase().includes(searchItem.toLowerCase())) {return i}
     else {
       alert('Không tìm thấy sản phẩm')

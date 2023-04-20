@@ -114,7 +114,7 @@ export const menu = {
         },
         {
             id: uuidv4(),
-            name: 'cá mú chưng tương ',
+            name: 'Cá mú chưng tương ',
             img: ca_hap_3,
             price: 'theo thời giá'
         },

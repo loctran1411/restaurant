@@ -48,15 +48,15 @@ const ProductCard = (props) => {
     return (
         <div className='product__item'>
             <div className="product__img">
-                <img src={img} alt="product-img" className='w-100' />
+                <img src={img} alt="product-img"/>
             </div>
 
             <div className="product__content">
                 {/* <h5 className="product_name"><Link to={`/foods/${id}`}>{title}</Link></h5> */}
                 <h5 className="product_name" 
                 // onClick={() => {toggleModal(!modalShown);}}
-                >{name}</h5>
-                <div className='d-flex align-items-center justify-content-between'>
+                >&#9654; {name}</h5>
+                <div className='d-flex justify-content-between'>
                     <span className='product__price'>{price}</span>
                     {/* <button className='addToCart__btn' onClick={addToCart}>
                 < i class="ri-shopping-cart-fill"></i>
