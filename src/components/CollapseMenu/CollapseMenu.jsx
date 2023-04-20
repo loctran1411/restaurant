@@ -42,7 +42,7 @@ const CollapseMenu = ({ menu, name_list_menu }) => {
                                 ))
                             }
                         </Row>
-                        <div className='close-collapse'><button onClick={toggle}>close</button></div>
+                        <div className='close-collapse'><button onClick={toggle}>Đóng</button></div>
                     </Container>
                 </>
             )}

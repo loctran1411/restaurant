@@ -1,0 +1,16 @@
+.main-content {
+    width: 100%;
+    background-color: rgb(37 37 37);
+}
+
+/* responsive screen */
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (max-width: 576px) {}
+
+@media screen and (max-width: 350px) {}

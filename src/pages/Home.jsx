@@ -75,7 +75,7 @@ const Home = () => {
   return (
     <Helmet title="Home">
       <CarouselSlider />
-      <section id="home"></section>
+      <section id="gioi-thieu"></section>
       <section>
         <Container>
           <div className="hero">
@@ -108,8 +108,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section id='foods'></section>
-
+      <section id='thuc-don'></section>
       <section className="pt-0" >
         <Col lg='12' className='text-center'>
         </Col>
@@ -158,7 +157,7 @@ const Home = () => {
         <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau}/>
       </section>
 
-      <section id="service"></section>
+      <section id="dich-vu"></section>
       <section>
         <Container>
           <Row>

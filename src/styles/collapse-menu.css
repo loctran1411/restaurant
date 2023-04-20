@@ -28,7 +28,7 @@
 }
 
 .toggle-button_active {
-    background: #ffbf6966 !important;
+    background: #ffc06ba3 !important;
 }
 
 .toggle-button .toggle-button-icon,
@@ -44,7 +44,8 @@
 }
 
 .collapse-menu-content {
-    background: #ffbf6966;
+    /* background: #ffbf6966; */
+    border: 1px solid #ffbf6966;
     border-radius: 15px;
     margin: 0 0 20px 0;
 }
@@ -53,11 +54,12 @@
     display: flex;
     flex-direction: row;
     padding: 10px;
+    border-bottom: 1px solid #acacac42;
 }
 
 .content-detail img {
     width: 200px;
-    height: 100%;
+    height: 140px;
     border-radius: 15px;
 }
 
@@ -74,6 +76,9 @@ h6 {
 .content-detail .name-price-food {
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .close-collapse {
@@ -117,8 +122,30 @@ h6 {
         flex-direction: column;
         padding: 10px;
     }
-    .collapse-menu-content_item{
+
+    .collapse-menu-content_item {
         width: 100% !important;
+    }
+
+    .content-detail img {
+        width: 100px;
+        height: auto;
+    }
+
+    .content-detail h5 {
+        font-size: 16px;
+    }
+
+    .toggle-button,
+    .toggle-button_active {
+        padding: 0;
+        border-radius: 7px;
+        margin: 5px 0;
+    }
+
+    .toggle-button-header {
+        display: flex;
+        justify-content: center;
     }
 }
 

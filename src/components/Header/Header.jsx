@@ -85,11 +85,11 @@ const Header = () => {
                 ))} */}
                 <Navbar>
                   <Nav className="nav-bar">
-                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#home">Giới thiệu</Nav.Link>
-                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#foods">Thực đơn</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#gioi-thieu">Giới thiệu</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#thuc-don">Thực đơn</Nav.Link>
                     {/* <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#bestseller">Món bán chạy</Nav.Link> */}
-                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#service">Dịch vụ</Nav.Link>
-                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#contact">Liên hệ</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#dich-vu">Dịch vụ</Nav.Link>
+                    <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#lien-he">Liên hệ</Nav.Link>
                   </Nav>
                 </Navbar>
               </div>
