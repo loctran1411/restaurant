@@ -112,7 +112,20 @@ h6 {
     }
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .content-detail img {
+        width: 100px;
+        height: 80px;
+    }
+
+    .content-detail h5 {
+        font-size: 13px;
+    }
+
+    .content-detail h6 {
+        font-size: 12px;
+    }
+}
 
 @media only screen and (min-width: 600px) {}
 
@@ -129,7 +142,7 @@ h6 {
 
     .content-detail img {
         width: 100px;
-        height: 85px;
+        height: 80px;
     }
 
     .content-detail h5 {
@@ -148,5 +161,3 @@ h6 {
         justify-content: center;
     }
 }
-
-@media screen and (max-width: 350px) {}
