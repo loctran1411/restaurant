@@ -9,6 +9,7 @@ import featureImg02 from '../assets/images/service-02.png'
 import featureImg03 from '../assets/images/service-03.png'
 
 import products from '../assets/fake-data/products.js'
+import menuToSearch from '../assets/fake-data/menuToSearch'
 import info from '../assets/fake-data/info.js'
 import whyImg from '../assets/images/location.png'
 import networkingImg from '../assets/images/network.png'
@@ -49,7 +50,7 @@ const Home = () => {
   const [infomation, setInfomation] = useState(info)
 
   useEffect(() => {
-    const filteredPizza = products.filter((i) => i.category === 'Pizza')
+    const filteredPizza = menuToSearch.filter((i) => i.cate === 'ghe')
     const slicePizza = filteredPizza.slice(0, 4)
     setHotPizza(slicePizza)
   }, [])
@@ -227,7 +228,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg='12' className='text-center mb-5'>
-              <h2>Hot Pizza</h2>
+              <h2>Món bán chạy</h2>
             </Col>
             {
               hotPizza.map((i) => (

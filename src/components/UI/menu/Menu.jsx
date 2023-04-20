@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import ReactPaginate from 'react-paginate'
-import products from '../../../assets/fake-data/products'
+// import products from '../../../assets/fake-data/products'
+import menuToSearch from '../../../assets/fake-data/menuToSearch'
 import ProductCard from '../product-card/ProductCard'
 
 import '../../../styles/all-foods.css'
@@ -13,10 +14,10 @@ const Menu = () => {
     const [pageNumber, setPageNumber] = useState(0)
 
     // filter search item
-    const searchedProduct = products.filter((i) => {
-        if (searchItem.value === '') { return i }
-        if (i.title.toLowerCase().includes(searchItem.toLowerCase())) { return i }
-        else { console.log('Không tìm thấy sản phẩm') }
+    const searchedProduct = menuToSearch.filter((i) => {
+        if (searchItem.valueOf === '') { return i }
+        if (i.name.toLowerCase().includes(searchItem.toLowerCase())) { return i }
+        // else { console.log('Không tìm thấy sản phẩm') }
     })
 
     const productPerPage = 8 // số item trong 1 page

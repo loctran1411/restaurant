@@ -3,6 +3,9 @@
   text-align: center;
   padding: 30px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product__img {
