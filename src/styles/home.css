@@ -1,3 +1,6 @@
+.hero_info{
+  padding: 35px 0 0 0;
+}
 .hero {
   display: flex;
   flex-direction: row;
@@ -191,6 +194,9 @@
 }
 
 @media only screen and (max-width: 576px) {
+  .hero_info{
+    padding: 0;
+  }
   .hero__img div {
     padding: 0;
   }

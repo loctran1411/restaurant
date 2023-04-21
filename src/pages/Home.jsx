@@ -77,7 +77,7 @@ const Home = () => {
     <Helmet title="Home">
       <CarouselSlider />
       <section id="gioi-thieu"></section>
-      <section>
+      <section className='hero_info'>
         <Container>
           <div className="hero">
             <div class="hero__content">
