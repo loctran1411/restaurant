@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-import { Container } from "reactstrap";
+// import { Container } from "reactstrap";
 import logo from "../../assets/images/logo_yen.png";
 import { Link, NavLink, BrowserRouter as Router } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -59,9 +59,8 @@ const Header = () => {
 
   return (
     <header className="header" ref={headerRef}>
-      <Container>
         {/* <div className="nav__wrapper d-flex align-items-center justify-content-between"> */}
-        <div className="nav__wrapper d-flex justify-content-between">
+        <div className="nav__wrapper d-flex justify-content-between header-container">
           <div className="logo">
             <Link to={'/'}><img src={logo} alt="logo" /></Link>
             {/* <h5>YenLongHai</h5> */}
@@ -111,7 +110,6 @@ const Header = () => {
             </span>
           </div>
         </div>
-      </Container>
     </header>
   );
 };
