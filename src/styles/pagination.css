@@ -9,6 +9,11 @@
     list-style: none;
     margin-top: 30px;
   }
+
+  .paginationBttns .selected{
+    border-radius: 10px;
+    background-color: #f0ab50bf;
+  }
   
   .paginationBttns a {
     padding: 5px 13px;
@@ -23,7 +28,8 @@
   }
   
   .paginationBttns a:hover {
-    background: #26b1c1;
+    background-color: #f0ab50bf;
+    border-color: #f0ab50bf;
   }
 
   @media only screen and (max-width: 768px) {

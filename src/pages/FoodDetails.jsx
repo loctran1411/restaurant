@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import products from '../assets/fake-data/products'
+import menuToSearch from '../assets/fake-data/menuToSearch'
 import { useParams } from 'react-router-dom'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/common-section/CommonSection'
@@ -16,7 +16,7 @@ const FoodDetails = () => {
 
   const [tab, setTab] = useState('desc')
   const { id } = useParams()
-  const product = products.find(product => product.id === id)
+  const product = menuToSearch.find(product => product.id === id)
   const { title, price, category, desc, image01 } = product
   const [reviewImg, setPreviewImg] = useState(product.image01)
 
@@ -25,7 +25,7 @@ const FoodDetails = () => {
   const [reviewMsg, setReviewMsg] = useState('')
 
   //lấy cate sản phẩm
-  const relatedProduct = products.filter(i => category === i.category)
+  const relatedProduct = menuToSearch.filter(i => category === i.category)
   // console.log(relatedProduct);
 
   //load ra ảnh đầu tiên demo món ăn

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import ReactPaginate from 'react-paginate'
-// import products from '../../../assets/fake-data/products'
 import menuToSearch from '../../../assets/fake-data/menuToSearch'
 import ProductCard from '../product-card/ProductCard'
 

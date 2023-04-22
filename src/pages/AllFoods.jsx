@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/common-section/CommonSection'
 
-import products from '../assets/fake-data/products'
+import menuToSearch from '../assets/fake-data/menuToSearch'
 import ProductCard from '../components/UI/product-card/ProductCard'
 import ReactPaginate from 'react-paginate'
 
@@ -16,7 +16,7 @@ const AllFoods = () => {
   const [pageNumber, setPageNumber] = useState(0)
 
   // filter search item
-  const searchedProduct = products.filter((i) => {
+  const searchedProduct = menuToSearch.filter((i) => {
     if (searchItem.valueOf === '') {return i}
     if (i.title.toLowerCase().includes(searchItem.toLowerCase())) {return i}
     else {
@@ -49,15 +49,6 @@ const AllFoods = () => {
             </Col>
 
             <Col lg='6' md='6' sm='6' className='mb-5'>
-              {/* <div className="sorting__widget text-end">
-                <select className='w-50'>
-                  <option>Lọc giá</option>
-                  <option value="ascending">Giá tăng dần</option>
-                  <option value="descending">Giá giảm dần</option>
-                  <option value="high-price">Giá cao</option>
-                  <option value="low-price">Giá thấp</option>
-                </select>
-              </div> */}
             </Col>
 
             {

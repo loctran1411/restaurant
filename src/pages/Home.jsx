@@ -8,13 +8,12 @@ import featureImg01 from '../assets/images/service-01.png'
 import featureImg02 from '../assets/images/service-02.png'
 import featureImg03 from '../assets/images/service-03.png'
 
-import products from '../assets/fake-data/products.js'
 import menuToSearch from '../assets/fake-data/menuToSearch'
+
 import info from '../assets/fake-data/info.js'
 import whyImg from '../assets/images/location.png'
 import networkingImg from '../assets/images/network.png'
 
-import ProductCard from '../components/UI/product-card/ProductCard'
 import TestimonialSlider from '../components/UI/slider/TestimonialSlider'
 import CarouselSlider from '../components/Carousel/CarouselSlider'
 import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
@@ -41,11 +40,7 @@ const featureData = [
   }
 ]
 
-
-
 const Home = () => {
-  const [category, setCategory] = useState("ALL")
-  const [allProducts, setAllProducts] = useState(products)
   const [hotPizza, setHotPizza] = useState([])
   const [infomation, setInfomation] = useState(info)
 
@@ -54,24 +49,6 @@ const Home = () => {
     const slicePizza = filteredPizza.slice(0, 4)
     setHotPizza(slicePizza)
   }, [])
-
-  useEffect(() => {
-    if (category === "ALL") {
-      setAllProducts(products)
-    }
-    if (category === "BURGER") {
-      const filteredProducts = products.filter(i => i.category === 'Burger')
-      setAllProducts(filteredProducts)
-    }
-    if (category === "PIZZA") {
-      const filteredProducts = products.filter(i => i.category === 'Pizza')
-      setAllProducts(filteredProducts)
-    }
-    if (category === "BREAD") {
-      const filteredProducts = products.filter(i => i.category === 'Bread')
-      setAllProducts(filteredProducts)
-    }
-  }, [category])
 
   return (
     <Helmet title="Home">
@@ -115,34 +92,6 @@ const Home = () => {
         </Col>
         <Menu />
       </section>
-
-      {/* <section id="bestseller"></section>
-      <section>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center'>
-              <h2>Món bán chạy</h2>
-            </Col>
-
-            <Col lg='12'>
-              <div className='food__category d-flex align-items-center justify-content-center'>
-                <button className={`all__btn ${category === 'ALL' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('ALL')}>Tất cả</button>
-                <button className={`d-flex align-items-center gap-2 ${category === 'BURGER' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BURGER')}><img src={foodCategoryImg01} alt="food category burger" />Burger</button>
-                <button className={`d-flex align-items-center gap-2 ${category === 'PIZZA' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('PIZZA')}><img src={foodCategoryImg02} alt="food category pizza" />Pizza</button>
-                <button className={`d-flex align-items-center gap-2 ${category === 'BREAD' ? 'foodBtnActive' : ''}`} onClick={() => setCategory('BREAD')}><img src={foodCategoryImg03} alt="food category bread" />Bánh mì</button>
-              </div>
-            </Col>
-
-            {
-              allProducts.map((i) => (
-                <Col lg='3' md='4' sm='6' xs='6' key={i.id} className='mt-5'>
-                  <ProductCard i={i} />
-                </Col>
-              ))
-            }
-          </Row>
-        </Container>
-      </section> */}
 
       <section>
         <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca}/>
@@ -224,29 +173,11 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* <section className="pt-0">
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center mb-5'>
-              <h2>Món bán chạy</h2>
-            </Col>
-            {
-              hotPizza.map((i) => (
-                <Col lg='3' md='4' key={i.id} className='p-2'>
-                  <ProductCard i={i} />
-                </Col>
-              ))
-            }
-          </Row>
-        </Container>
-      </section> */}
-
       <section>
         <Container>
           <Row>
             <Col lg='6' md='6'>
               <div className='testimonial'>
-                {/* <h5 className='testimonial__subtitle mb-4'>Testimonial</h5> */}
                 <h2 className='testimonial__title mb-4'>Trải Nghiệm và Đánh giá từ <span>Khách Hàng</span> đến với chúng tôi</h2>
                 <p className='testimonial__desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint ad odit delectus consequuntur enim, dicta cupiditate saepe id praesentium ex.</p>
                 <TestimonialSlider />
