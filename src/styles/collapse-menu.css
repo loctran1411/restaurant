@@ -23,9 +23,9 @@
 .toggle-button_active {
     width: 70%;
     background-color: transparent;
-    border: 1px solid #505050a3;
+    border: 1px solid #6e6c6b8f;
+    border-bottom: 3px solid #6e6c6b8f;
     color: #000;
-    border-bottom: 5px solid #e96d00;
     padding: 10px;
     margin: 0 0 5px 0;
     display: flex;
