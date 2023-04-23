@@ -15,7 +15,7 @@
 }
 
 .toggle-button:hover,
-.toggle-button_activer:hover{
+.toggle-button_activer:hover {
     background: #d0d0d0d9;
 }
 
@@ -25,7 +25,7 @@
     background-color: transparent;
     border: 1px solid #505050a3;
     color: #000;
-    /* font-weight: 600; */
+    border-bottom: 5px solid #e96d00;
     padding: 10px;
     margin: 0 0 5px 0;
     display: flex;
@@ -55,18 +55,25 @@
     border-radius: 50%;
 }
 
-.toggle-button_active .toggle-button-header h4{
+.toggle-button_active .toggle-button-header h4 {
     color: #e96d00;
     font-weight: 600;
 }
 
 .collapse-menu-content {
-    /* background: #ffbf6966; */
-    /* border: 1px solid #e96d00; */
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
-    margin: 0 0 20px 0;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    line-height: 30px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    letter-spacing: .5px;
+    border-top: 5px solid;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: 0 0;
+    color: #e96d00;
 }
 
 .content-detail {
@@ -107,18 +114,22 @@ h6 {
 }
 
 .close-collapse button {
-    padding: 5px 25px;
-    background: none;
-    border: 2px solid #e96d00;
-    border-radius: 10px;
-    color: #000;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    line-height: 30px;
+    padding: 0 20px;
+    margin: 15px 0 0 0;
+    letter-spacing: .5px;
+    border-bottom: 5px solid;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: 0 0;
+    color: #e96d00;
+    border: 1px solid transparent;
+    font-weight: 500;
 }
-
-.close-collapse button:hover {
-    background: #c5653b;
-}
-
 
 @media only screen and (max-width: 992px) {
     .content-detail img {
@@ -147,17 +158,17 @@ h6 {
 }
 
 @media only screen and (max-width: 600px) {
-    .carousel.carousel-slider .control-arrow{
+    .carousel.carousel-slider .control-arrow {
         visibility: hidden;
     }
-    .carousel.carousel-slider{
-        height: 300px;
-    }
-    .toggle-button, .toggle-button_active{
+
+    .toggle-button,
+    .toggle-button_active {
         width: 88%;
     }
-    .collapse-menu-content{
-        box-shadow: none;
+
+    .collapse-menu-content {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
 
@@ -184,14 +195,14 @@ h6 {
     .toggle-button_active {
         padding: 0;
         border-radius: 7px;
-        margin: 5px 0;
     }
 
     .toggle-button-header {
         display: flex;
         justify-content: center;
     }
-    .carousel.carousel-slider .control-arrow{
+
+    .carousel.carousel-slider .control-arrow {
         visibility: hidden;
     }
 }
