@@ -7,7 +7,7 @@
 }
 
 .feature__subtitle {
-  color: #e7b451;
+  color: #e96d00;
 }
 
 .feature__title span {
@@ -15,22 +15,22 @@
 }
 
 .feature__text {
-  color: white;
+  color: #000;
 }
 
 .menu__title {
-  color: white;
+  color: #000;
   display: flex;
   justify-content: center;
   padding: 0 0 20px 0;
 }
 
 .feature__item p {
-  color: white;
+  color: #000;
 }
 
 .feature__item h5 {
-  color: #e7b451;
+  color: #e96d00;
 }
 
 .food__category {
@@ -62,11 +62,11 @@
 }
 
 .tasty__treat-title span {
-  color: #e7b451;
+  color: #e96d00;
 }
 
 .tasty__treat-desc {
-  color: #fff;
+  color: #000;
   line-height: 28px;
 }
 
@@ -102,11 +102,11 @@
 }
 
 .testimonial__title span {
-  color: #e7b451;
+  color: #e96d00;
 }
 
 .testimonial__desc {
-  color: #fff;
+  color: #000;
   line-height: 30px;
 }
 

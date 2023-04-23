@@ -6,20 +6,26 @@
 }
 
 .toggle-button-header_title {
-    text-transform: capitalize
+    text-transform: capitalize;
+    font-weight: normal;
 }
 
 .toggle-button-header {
     width: 100%;
 }
 
+.toggle-button:hover,
+.toggle-button_activer:hover{
+    background: #d0d0d0d9;
+}
+
 .toggle-button,
 .toggle-button_active {
-    width: 80%;
+    width: 70%;
     background-color: transparent;
-    border: 2px solid #e7b451;
-    color: #fff;
-    font-weight: 600;
+    border: 1px solid #505050a3;
+    color: #000;
+    /* font-weight: 600; */
     padding: 10px;
     margin: 0 0 5px 0;
     display: flex;
@@ -28,7 +34,10 @@
 }
 
 .toggle-button_active {
-    background: #ffc06ba3 !important;
+    background: #d0d0d0d9 !important;
+    border: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .toggle-button .toggle-button-icon,
@@ -41,20 +50,30 @@
     margin: 5px;
     font-size: 20px;
     transform: rotate(45deg);
+    color: #e96d00;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.toggle-button_active .toggle-button-header h4{
+    color: #e96d00;
+    font-weight: 600;
 }
 
 .collapse-menu-content {
     /* background: #ffbf6966; */
-    border: 1px solid #ffbf6966;
-    border-radius: 15px;
+    /* border: 1px solid #e96d00; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     margin: 0 0 20px 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .content-detail {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    border-bottom: 1px solid #acacac42;
+    border-bottom: 1px solid #e96d00;
 }
 
 .content-detail img {
@@ -65,7 +84,7 @@
 
 .content-detail h5,
 h6 {
-    color: #fff;
+    color: #000;
     text-transform: capitalize;
 }
 
@@ -90,9 +109,9 @@ h6 {
 .close-collapse button {
     padding: 5px 25px;
     background: none;
-    border: 2px solid #fff;
+    border: 2px solid #e96d00;
     border-radius: 10px;
-    color: white;
+    color: #000;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 

@@ -89,28 +89,28 @@ const menuToSearch = [
         id: uuidv4(),
         name: 'Nghêu hấp sả',
         img: oc_1,
-        price: '90đ/ 1 thố',
+        price: '90.000đ/ 1 thố',
         cate:'oc'
     },
     {
         id: uuidv4(),
         name: 'Nghêu hấp thái ',
         img: oc_2,
-        price: '90đ/ 1 thố ',
+        price: '90.000đ/ 1 thố ',
         cate:'oc'
     },
     {
         id: uuidv4(),
         name: 'Nghêu um tiêu xanh ',
         img: oc_3,
-        price: '90đ/1 thố',
+        price: '90.000đ/1 thố',
         cate:'oc'
     },
     {
         id: uuidv4(),
-        name: 'canh nghêu thì là ',
+        name: 'Canh nghêu thì là ',
         img: oc_4,
-        price: '120đ/ 1 tô',
+        price: '120.000đ/ 1 tô',
         cate:'oc'
     },
     //mong tay
@@ -118,35 +118,35 @@ const menuToSearch = [
         id: uuidv4(),
         name: 'Xào lá quế ',
         img: mong_tay_1,
-        price: '120đ/ 1 đĩa ',
+        price: '120.000đ/ 1 đĩa ',
         cate:'mongtay'
     },
     {
         id: uuidv4(),
         name: 'Xào rau muống ',
         img: mong_tay_2,
-        price: '120đ/ 1 đĩa ',
+        price: '120.000đ/ 1 đĩa ',
         cate:'mongtay'
     },
     {
         id: uuidv4(),
         name: 'Xào bơ tỏi ',
         img: mong_tay_3,
-        price: '120đ/ 1 đĩa ',
+        price: '120.000đ/ 1 đĩa ',
         cate:'mongtay'
     },
     {
         id: uuidv4(),
         name: 'Cháy tỏi ',
         img: mong_tay_4,
-        price: '120đ/ 1 đĩa ',
+        price: '120.000đ/ 1 đĩa ',
         cate:'mongtay'
     },
     {
         id: uuidv4(),
         name: 'Rang me ',
         img: mong_tay_5,
-        price: '120đ/ 1 đĩa ',
+        price: '120.000đ/ 1 đĩa ',
         cate:'mongtay'
     },
     //ca
@@ -154,35 +154,35 @@ const menuToSearch = [
         id: uuidv4(),
         name: 'Cá dứa kho tộ ',
         img: ca_1,
-        price: '140đ/ 1 tộ ',
+        price: '140.000đ/ 1 tộ ',
         cate:'ca'
     },
     {
         id: uuidv4(),
         name: 'Cá bóp kho tộ ',
         img: ca_2,
-        price: '150đ/ 1 tộ',
+        price: '150.000đ/ 1 tộ',
         cate:'ca'
     },
     {
         id: uuidv4(),
         name: 'Cá chiên sả ớt ',
         img: ca_3,
-        price: '150đ/ 1 tộ',
+        price: '150.000đ/ 1 tộ',
         cate:'ca'
     },
     {
         id: uuidv4(),
-        name: 'cá chiên tươi',
+        name: 'Cá chiên tươi',
         img: ca_4,
-        price: '150đ/ 1 tộ',
+        price: '150.000đ/ 1 tộ',
         cate:'ca'
     },
     {
         id: uuidv4(),
         name: 'Cá chiên sốt cà',
         img: ca_5,
-        price: '150đ/ 1 tộ',
+        price: '150.000đ/ 1 tộ',
         cate:'ca'
     },
     //lau
@@ -190,42 +190,42 @@ const menuToSearch = [
         id: uuidv4(),
         name: 'Lẩu cá nấu ngót ',
         img: lau_1,
-        price: '300đ/ 1 lẩu ',
+        price: '300.000đ/ 1 lẩu ',
         cate:'lau'
     },
     {
         id: uuidv4(),
         name: 'Lẩu cá nấu măng chua ',
         img: lau_2,
-        price: '300đ/ 1 lẩu ',
+        price: '300.000đ/ 1 lẩu ',
         cate:'lau'
     },
     {
         id: uuidv4(),
         name: 'Lẩu cá dứa ',
         img: lau_3,
-        price: '300đ/ 1 lẩu ',
+        price: '300.000đ/ 1 lẩu ',
         cate:'lau'
     },
     {
         id: uuidv4(),
         name: 'lẩu cá bóp ',
         img: lau_4,
-        price: '300đ/ 1 lẩu ',
+        price: '300.000đ/ 1 lẩu ',
         cate:'lau'
     },
     {
         id: uuidv4(),
         name: 'Lẩu tôm mực ',
         img: lau_5,
-        price: '300đ/ 1 lẩu ',
+        price: '300.000đ/ 1 lẩu ',
         cate:'lau'
     },
     {
         id: uuidv4(),
         name: 'Lẩu thái lan ',
         img: lau_6,
-        price: '350đ/ 1 lẩu ',
+        price: '350.000đ/ 1 lẩu ',
         cate:'lau'
     }
 ]

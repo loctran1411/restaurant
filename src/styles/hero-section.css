@@ -27,7 +27,7 @@
 }
 
 .hero__content-info {
-  color: white;
+  color: #000;
   list-style-type: none;
 }
 
@@ -36,8 +36,8 @@
 }
 
 .hero__content h5 {
-  color: white;
-  border-bottom: 1px solid white;
+  color: #000;
+  border-bottom: 1px solid #000;
   padding: 10px;
 }
 

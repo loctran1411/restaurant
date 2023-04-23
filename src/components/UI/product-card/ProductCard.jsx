@@ -12,8 +12,8 @@ const ProductCard = (props) => {
 
             <div className="product__content">
                 <h5 className="product_name" 
-                >&#9654; {name}</h5>
-                <div className='d-flex justify-content-between'>
+                >{name}</h5>
+                <div className='d-flex product__price-container'>
                     <span className='product__price'>{price}</span>
                 </div>
             </div>

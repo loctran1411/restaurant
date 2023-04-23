@@ -12,13 +12,13 @@
 
   .paginationBttns .selected{
     border-radius: 10px;
-    background-color: #f0ab50bf;
+    background-color: #e96d00;
   }
   
   .paginationBttns a {
     padding: 5px 13px;
     /* background: #e7b451; */
-    color: #fff !important;
+    color: #000 !important;
     border-radius: 5px;
     display: flex;
     align-items: center;

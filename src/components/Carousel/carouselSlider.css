@@ -10,6 +10,21 @@
   border-radius: 30px;
 }
 
+.carousel.carousel-slider .control-arrow{
+  background: black !important;
+  height: 120px;
+  top: 150px !important;
+  border-radius: 15px;
+}
+
+.carousel .control-prev.control-arrow {
+  left: 30px !important;
+}
+
+.carousel .control-next.control-arrow {
+  right: 30px !important;
+}
+
 @media only screen and (max-width: 992px) {
   .carousel .slide img {
     height: 55vh;

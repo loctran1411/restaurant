@@ -46,7 +46,7 @@ const Menu = () => {
                     {
                         displayPage
                             .map((i) => (
-                                <Col lg='6' md='4' sm='6' xs='6' key={i.id} className='mb-4'>
+                                <Col lg='4' md='4' sm='6' xs='6' key={i.id} className='mb-4'>
                                     <ProductCard i={i} />
                                 </Col>
                             ))
