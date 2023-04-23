@@ -47,7 +47,11 @@ section {
 
 @media only screen and (max-width: 768px) {}
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  section {
+    padding: 20px 0 0 0;
+  }
+}
 
 @media only screen and (max-width: 576px) {
   section {
