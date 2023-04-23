@@ -130,6 +130,9 @@
   .product__content h5 {
     font-size: 12px;
     justify-content: center;
+    height: 25px;
+    align-content: flex-end;
+    margin: 5px;
   }
 
   .product__price {
