@@ -63,7 +63,7 @@
 .collapse-menu-content {
     /* background: #ffbf6966; */
     /* border: 1px solid #e96d00; */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
     margin: 0 0 20px 0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -133,7 +133,7 @@ h6 {
 
 @media only screen and (max-width: 768px) {
     .content-detail img {
-        width: 100px;
+        width: 115px;
         height: 80px;
     }
 
@@ -146,7 +146,7 @@ h6 {
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     .carousel.carousel-slider .control-arrow{
         visibility: hidden;
     }
@@ -170,11 +170,6 @@ h6 {
 
     .collapse-menu-content_item {
         width: 100% !important;
-    }
-
-    .content-detail img {
-        width: 100%;
-        height: 75px;
     }
 
     .content-detail h5 {
