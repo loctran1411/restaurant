@@ -94,18 +94,75 @@ const Home = () => {
       </section>
 
       <section>
-        <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca}/>
+        <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca} />
 
-        <CollapseMenu menu={menu.cahap} name_list_menu={name_list_menu.cate_cahap}/>
+        <CollapseMenu menu={menu.cahap} name_list_menu={name_list_menu.cate_cahap} />
 
-        <CollapseMenu menu={menu.ghe} name_list_menu={name_list_menu.cate_ghe}/>
+        <CollapseMenu menu={menu.ghe} name_list_menu={name_list_menu.cate_ghe} />
 
-        <CollapseMenu menu={menu.oc} name_list_menu={name_list_menu.cate_oc}/>
+        <CollapseMenu menu={menu.oc} name_list_menu={name_list_menu.cate_oc} />
 
-        <CollapseMenu menu={menu.mongtay} name_list_menu={name_list_menu.cate_mongtay}/>
+        <CollapseMenu menu={menu.mongtay} name_list_menu={name_list_menu.cate_mongtay} />
 
-        <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau}/>
+        <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau} />
       </section>
+
+      <div>
+        <div className="parallax">
+          <div className='parallax_content'>
+            <div className="parallax_content-title">
+              <h3>Thức uống</h3>
+            </div>
+            <Container>
+              <Row>
+                <Col lg='6' md='6'>
+                  <div className='parallax_content-item'>
+                    <ul>
+                      <li>Bia - (Thùng, Két, Lốc, Lon)
+                        <ul>
+                          <li>Tiger</li>
+                          <li>Heineken</li>
+                          <li>333</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
+
+                <Col lg='6' md='6'>
+                  <div className='parallax_content-item'>
+                    <ul>
+                      <li>Rượu - (Chai)
+                        <ul>
+                          <li>Vodka</li>
+                          <li>Gin</li>
+                          <li>Vermouth</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
+
+                <Col lg='6' md='6'>
+                  <div className='parallax_content-item'>
+                    <ul>
+                      <li>Nước ngọt - (Thùng, Két, Lốc, Lon)
+                        <ul>
+                          <li>Coca</li>
+                          <li>Pepsi</li>
+                          <li>7Up</li>
+                        </ul>
+                      </li>
+                      <li>Nước lọc - (Chai)</li>
+                    </ul>
+                  </div>
+                </Col>
+
+              </Row>
+            </Container>
+          </div>
+        </div>
+      </div>
 
       <section id="dich-vu"></section>
       <section>
