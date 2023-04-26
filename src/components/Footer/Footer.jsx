@@ -64,11 +64,11 @@ const Footer = () => {
         </Row>
 
         <Row className="mt-5">
-          {/* <Col lg="6" md="6">
+          <Col lg="6" md="6">
             <p className="copyright__text">
               2023 &#9997; Ng Chg Tu
             </p>
-          </Col> */}
+          </Col>
           {/* <Col lg="6" md="6">
             <div className="social__links d-flex align-items-center gap-4 justify-content-end">
               <p className="m-0">Follow: </p>
