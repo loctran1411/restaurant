@@ -20,7 +20,7 @@ import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
 import Menu from '../components/UI/menu/Menu'
 import Form from '../components/Form/Form'
 import CollapseMenu from '../components/CollapseMenu/CollapseMenu'
-import { menu, name_list_menu } from '../assets/fake-data/menu'
+import { menu, name_list_menu, thuc_uong, loai_thuc_uong } from '../assets/fake-data/menu'
 
 const featureData = [
   {
@@ -105,9 +105,11 @@ const Home = () => {
         <CollapseMenu menu={menu.mongtay} name_list_menu={name_list_menu.cate_mongtay} />
 
         <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau} />
+
+        <CollapseMenu thuc_uong={thuc_uong} name_list_menu={name_list_menu.cate_thuc_uong} loai_thuc_uong={loai_thuc_uong} />
       </section>
 
-      <div>
+      {/* <div>
         <div className="parallax">
           <div className='parallax_content'>
             <div className="parallax_content-title">
@@ -162,7 +164,7 @@ const Home = () => {
             </Container>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <section id="dich-vu"></section>
       <section>

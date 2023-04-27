@@ -115,6 +115,28 @@ h6 {
     justify-content: center;
 }
 
+.content-detail .name-price-drink {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-detail .name-price-drink .space {
+    border: none;
+    border-top: 1px dotted #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 50%;
+    margin: 20px 10px;
+}
+
+.content-detail .name-price-drink p{
+    font-size: 13px;
+}
+
 .close-collapse {
     display: flex;
     justify-content: center;

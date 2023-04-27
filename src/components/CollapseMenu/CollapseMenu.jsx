@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import "../../styles/collapse-menu.css";
-import { AiOutlinePlus } from 'react-icons/ai'
 import { Col, Container, Row } from 'reactstrap'
 
-const CollapseMenu = ({ menu, name_list_menu }) => {
+const CollapseMenu = ({ menu, name_list_menu, thuc_uong, loai_thuc_uong }) => {
     const [openCollapse, setOpenCollapse] = useState(false);
 
     const toggle = () => {
         setOpenCollapse(!openCollapse);
     };
+
+    // console.log(loai_thuc_uong);
 
     return (
         <div className="collapse-container">
@@ -20,16 +21,16 @@ const CollapseMenu = ({ menu, name_list_menu }) => {
                         </div>
                     ))
                 }
-                <div className="toggle-button-header_icon">
+                {/* <div className="toggle-button-header_icon">
                     <AiOutlinePlus className={openCollapse ? 'toggle-button-icon_active' : 'toggle-button-icon'} />
-                </div>
+                </div> */}
             </button>
             {openCollapse && (
                 <>
                     <Container className='collapse-menu-content'>
                         <Row className='collapse-menu-content_row'>
                             {
-                                menu.map((data) => (
+                                menu ? menu.map((data) => (
                                     <Col lg='6' md='6' sm='6' xs='6' key={data.id} className='collapse-menu-content_item'>
                                         <div className="content-detail">
                                             <img src={data.img} alt="food-img" />
@@ -39,7 +40,18 @@ const CollapseMenu = ({ menu, name_list_menu }) => {
                                             </div>
                                         </div>
                                     </Col>
-                                ))
+                                )) :
+                                    thuc_uong.list_thuc_uong.map((data) => (
+                                        <Col lg='6' md='6' sm='6' xs='6' key={data.id} className='collapse-menu-content_item'>
+                                            <div className="content-detail">
+                                                <div className='name-price-drink'>
+                                                    <h5>{data.name}</h5>
+                                                    <hr className='space'/>
+                                                    <p>{data.price}</p>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    ))
                             }
                         </Row>
                         <div className='close-collapse'><button onClick={toggle}>Đóng</button></div>

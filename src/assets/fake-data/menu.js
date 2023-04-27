@@ -33,40 +33,46 @@ import oc_4 from '../images/menu/oc-4.png'
 import { v4 as uuidv4 } from 'uuid';
 
 export const name_list_menu = {
-    cate_ghe:[
+    cate_ghe: [
         {
             id: uuidv4(),
-            name:'ghẹ'
+            name: 'ghẹ'
         }
     ],
-    cate_cahap:[
+    cate_cahap: [
         {
             id: uuidv4(),
-            name:'cá hấp'
+            name: 'cá hấp'
         }
     ],
-    cate_oc:[
+    cate_oc: [
         {
             id: uuidv4(),
-            name:'ốc'
+            name: 'ốc'
         }
     ],
-    cate_mongtay:[
+    cate_mongtay: [
         {
             id: uuidv4(),
-            name:'móng tay'
+            name: 'móng tay'
         }
     ],
-    cate_ca:[
+    cate_ca: [
         {
             id: uuidv4(),
-            name:'cá'
+            name: 'cá'
         }
     ],
-    cate_lau:[
+    cate_lau: [
         {
             id: uuidv4(),
-            name:'lẩu'
+            name: 'lẩu'
+        }
+    ],
+    cate_thuc_uong: [
+        {
+            id: uuidv4(),
+            name: 'Thức uống'
         }
     ]
 }
@@ -131,19 +137,19 @@ export const menu = {
             id: uuidv4(),
             name: 'Nghêu hấp thái ',
             img: oc_2,
-            price: '90đ/ 1 thố '
+            price: '90.000đ/ 1 thố '
         },
         {
             id: uuidv4(),
             name: 'Nghêu um tiêu xanh ',
             img: oc_3,
-            price: '90đ/1 thố'
+            price: '90.000đ/1 thố'
         },
         {
             id: uuidv4(),
             name: 'canh nghêu thì là ',
             img: oc_4,
-            price: '120đ/ 1 tô'
+            price: '120.000đ/ 1 tô'
         }
     ],
 
@@ -152,31 +158,31 @@ export const menu = {
             id: uuidv4(),
             name: 'Xào lá quế ',
             img: mong_tay_1,
-            price: '120đ/ 1 đĩa '
+            price: '120.000đ/ 1 đĩa '
         },
         {
             id: uuidv4(),
             name: 'Xào rau muống ',
             img: mong_tay_2,
-            price: '120đ/ 1 đĩa '
+            price: '120.000đ/ 1 đĩa '
         },
         {
             id: uuidv4(),
             name: 'Xào bơ tỏi ',
             img: mong_tay_3,
-            price: '120đ/ 1 đĩa '
+            price: '120.000đ/ 1 đĩa '
         },
         {
             id: uuidv4(),
             name: 'Cháy tỏi ',
             img: mong_tay_4,
-            price: '120đ/ 1 đĩa '
+            price: '120.000đ/ 1 đĩa '
         },
         {
             id: uuidv4(),
             name: 'Rang me ',
             img: mong_tay_5,
-            price: '120đ/ 1 đĩa '
+            price: '120.000đ/ 1 đĩa '
         }
     ],
 
@@ -185,31 +191,31 @@ export const menu = {
             id: uuidv4(),
             name: 'Cá dứa kho tộ ',
             img: ca_1,
-            price: '140đ/ 1 tộ '
+            price: '140.000đ/ 1 tộ '
         },
         {
             id: uuidv4(),
             name: 'Cá bóp kho tộ ',
             img: ca_2,
-            price: '150đ/ 1 tộ'
+            price: '150.000đ/ 1 tộ'
         },
         {
             id: uuidv4(),
             name: 'Cá chiên sả ớt ',
             img: ca_3,
-            price: '150đ/ 1 tộ'
+            price: '150.000đ/ 1 tộ'
         },
         {
             id: uuidv4(),
             name: 'cá chiên tươi',
             img: ca_4,
-            price: '150đ/ 1 tộ'
+            price: '150.000đ/ 1 tộ'
         },
         {
             id: uuidv4(),
             name: 'Cá chiên sốt cà',
             img: ca_5,
-            price: '150đ/ 1 tộ'
+            price: '150.000đ/ 1 tộ'
         }
     ],
 
@@ -218,37 +224,37 @@ export const menu = {
             id: uuidv4(),
             name: 'Lẩu cá nấu ngót ',
             img: lau_1,
-            price: '300đ/ 1 lẩu '
+            price: '300.000đ/ 1 lẩu '
         },
         {
             id: uuidv4(),
             name: 'Lẩu cá nấu măng chua ',
             img: lau_2,
-            price: '300đ/ 1 lẩu '
+            price: '300.000đ/ 1 lẩu '
         },
         {
             id: uuidv4(),
             name: 'Lẩu cá dứa ',
             img: lau_3,
-            price: '300đ/ 1 lẩu '
+            price: '300.000đ/ 1 lẩu '
         },
         {
             id: uuidv4(),
             name: 'lẩu cá bóp ',
             img: lau_4,
-            price: '300đ/ 1 lẩu '
+            price: '300.000đ/ 1 lẩu '
         },
         {
             id: uuidv4(),
             name: 'Lẩu tôm mực ',
             img: lau_5,
-            price: '300đ/ 1 lẩu '
+            price: '300.000đ/ 1 lẩu '
         },
         {
             id: uuidv4(),
             name: 'Lẩu thái lan ',
             img: lau_6,
-            price: '350đ/ 1 lẩu '
+            price: '350.000đ/ 1 lẩu '
         }
     ],
 
@@ -303,5 +309,108 @@ export const menu = {
         name: '',
         img: 'hải sản',
         price: 1
+    }]
+}
+
+export const menuType = {
+    bia:"Bia",
+    nuoc_ngot:'Nước ngọt',
+    ruou:"Rượu",
+    nuoc_suoi:"Nước suối",
+}
+
+export const loai_thuc_uong = {
+    bia:[{
+        id: uuidv4(),
+        name: menuType.bia
     }],
+    ruou:[{
+        id: uuidv4(),
+        name: menuType.ruou
+    }],
+    nuoc_ngot:[{
+        id: uuidv4(),
+        name: menuType.nuoc_ngot
+    }],
+    nuoc_suoi:[{
+        id: uuidv4(),
+        name: menuType.nuoc_suoi
+    }],
+}
+
+export const thuc_uong = {
+    list_thuc_uong: [
+        {
+            id: uuidv4(),
+            name: '333',
+            price:'100.000đ',
+            type: menuType.bia
+        },
+        {
+            id: uuidv4(),
+            name: 'Tiger',
+            price:'100.000đ',
+            type: menuType.bia
+        },
+        {
+            id: uuidv4(),
+            name: 'Heineken',
+            price:'100.000đ',
+            type: menuType.bia
+        },
+        {
+            id: uuidv4(),
+            name: 'Coca',
+            price:'100.000đ',
+            type: menuType.nuoc_ngot
+        },
+        {
+            id: uuidv4(),
+            name: 'Pepsi',
+            price:'100.000đ',
+            type: menuType.nuoc_ngot
+        },
+        {
+            id: uuidv4(),
+            name: '7Up',
+            price:'100.000đ',
+            type: menuType.nuoc_ngot
+        },
+        {
+            id: uuidv4(),
+            name: 'Vodka',
+            price:'100.000đ',
+            type: menuType.ruou
+        },
+        {
+            id: uuidv4(),
+            name: 'Gin',
+            price:'100.000đ',
+            type: menuType.ruou
+        },
+        {
+            id: uuidv4(),
+            name: 'Vermouth',
+            price:'100.000đ',
+            type: menuType.ruou
+        },
+        {
+            id: uuidv4(),
+            name: 'Aquafina',
+            price:'100.000đ',
+            type: menuType.nuoc_suoi
+        },
+        {
+            id: uuidv4(),
+            name: 'Dasani',
+            price:'100.000đ',
+            type: menuType.nuoc_suoi
+        },
+        {
+            id: uuidv4(),
+            name: 'Satori',
+            price:'100.000đ',
+            type: menuType.nuoc_suoi
+        }
+    ]
 }

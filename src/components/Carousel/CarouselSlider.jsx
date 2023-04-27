@@ -1,20 +1,19 @@
 import React from 'react'
 import { Carousel } from "react-responsive-carousel";
 import './carouselSlider.css'
+import { introSlide } from '../../assets/fake-data/introSlide'
 
 const CarouselSlider = () => {
     return (
         <Carousel autoPlay interval="3000" transitionTime="1500" showThumbs={false} infiniteLoop={true}>
-            <div>
-                <img alt="" src='https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80' className='carousel_img'/>
-                {/* <p className="legend">Món 1</p> */}
-            </div>
-            <div>
-                <img alt="" src='https://assets.bonappetit.com/photos/631788f25635b01b337f6bb4/4:3/w_2000,h_1500,c_limit/220827_GuangXu_BA-UncleLou_014.jpg' className='carousel_img'/>
-            </div>
-            <div>
-                <img alt="" src='https://www.questrmg.com/wp-content/uploads/2019/03/web-banner-Top-Three-Restaurant-Trends.jpg' className='carousel_img'/>
-            </div>
+            {
+                introSlide.view_restaurant.map((i) => (
+                    <div key={i.id}>
+                        <img alt={i.alt} src={i.src} className='carousel_img' />
+                        {/* <p className="legend">Món 1</p> */}
+                    </div>
+                ))
+            }
         </Carousel>
     )
 }

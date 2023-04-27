@@ -31,7 +31,7 @@ const Menu = () => {
 
     return (
         <section>
-            <h2 className="menu__title">Thực đơn &#128220;</h2>
+            <h2 className="menu__title">Món bán chạy &#128220;</h2>
             <Container>
                 <Row>
                 <Col lg='6' md='6' sm='6' >
