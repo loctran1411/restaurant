@@ -166,7 +166,7 @@ const Home = () => {
         </div>
       </div> */}
 
-      <section id="dich-vu"></section>
+      {/* <section id="dich-vu"></section>
       <section>
         <Container>
           <Row>
@@ -247,7 +247,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       <section>
         <Form />
