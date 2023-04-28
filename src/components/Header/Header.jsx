@@ -47,21 +47,17 @@ const Header = () => {
 
         {/* ======== nav right icons ========= */}
         <div className="nav__right d-flex align-items-center gap-4 p-0">
-
+          <div>
+            <select defaultValue={i18n.language} onChange={handleTrans}>
+              {lngs.map(({ code, native }) => (
+                <option key={code} value={code}>
+                  {native}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5 menu__tab">
-              <div>
-                {/* <h1>{t("content")}</h1> */}
-
-                <select defaultValue={i18n.language} onChange={handleTrans}>
-                  {lngs.map(({ code, native }) => (
-                    <option key={code} value={code}>
-                      {native}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
               <Navbar>
                 <Nav className="nav-bar">
                   <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#gioi-thieu">{t('nav.nav_item_intro')}</Nav.Link>
