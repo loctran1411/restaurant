@@ -133,8 +133,9 @@ h6 {
     margin: 20px 10px;
 }
 
-.content-detail .name-price-drink p{
+.content-detail .name-price-drink p {
     font-size: 16px;
+    text-transform: capitalize;
 }
 
 .close-collapse {
@@ -185,6 +186,18 @@ h6 {
     .content-detail h6 {
         font-size: 12px;
     }
+
+    .content-detail .name-price-drink {
+        padding: 0;
+    }
+
+    .content-detail .name-price-drink p {
+        font-size: 12px;
+    }
+
+    .content-detail .name-price-drink .space {
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -234,5 +247,10 @@ h6 {
 
     .carousel.carousel-slider .control-arrow {
         visibility: hidden;
+    }
+
+    .content-detail .name-price-drink .space {
+        width: 25%;
+        margin: 15px 10px;
     }
 }
