@@ -1,0 +1,11 @@
+{
+    "nav": {
+        "nav_item_intro": "Giới thiệu",
+        "nav_item_menu": "Thực đơn",
+        "nav_item_services": "Dịch vụ",
+        "nav_item_contact": "Liên hệ"
+    },
+    "info":{
+        "info_desc_1": "Điều gì đã làm cho Yến Long Hải trở nên thật đặc biệt?"
+    }
+}

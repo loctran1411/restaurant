@@ -125,7 +125,7 @@ h6 {
 
 .content-detail .name-price-drink .space {
     border: none;
-    border-top: 1px dotted #f00;
+    border-top: 2px dotted #f00;
     color: #fff;
     background-color: #fff;
     height: 1px;
@@ -134,7 +134,7 @@ h6 {
 }
 
 .content-detail .name-price-drink p{
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .close-collapse {

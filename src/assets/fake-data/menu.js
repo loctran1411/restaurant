@@ -131,7 +131,7 @@ export const menu = {
             id: uuidv4(),
             name: 'Nghêu hấp sả',
             img: oc_1,
-            price: '90đ/ 1 thố'
+            price: '90.000đ/ 1 thố'
         },
         {
             id: uuidv4(),
@@ -342,74 +342,62 @@ export const thuc_uong = {
     list_thuc_uong: [
         {
             id: uuidv4(),
-            name: '333',
-            price:'100.000đ',
+            name: 'Tiger Nâu',
+            price:'19.000đ/ lon',
             type: menuType.bia
         },
         {
             id: uuidv4(),
-            name: 'Tiger',
-            price:'100.000đ',
+            name: 'Tiger Bạc',
+            price:'20.000đ/ lon',
             type: menuType.bia
         },
         {
             id: uuidv4(),
             name: 'Heineken',
-            price:'100.000đ',
+            price:'22.000đ/ lon',
             type: menuType.bia
         },
         {
             id: uuidv4(),
             name: 'Coca',
-            price:'100.000đ',
+            price:'15.000đ/ lon',
             type: menuType.nuoc_ngot
         },
         {
             id: uuidv4(),
             name: 'Pepsi',
-            price:'100.000đ',
+            price:'15.000đ/ lon',
             type: menuType.nuoc_ngot
         },
         {
             id: uuidv4(),
             name: '7Up',
-            price:'100.000đ',
+            price:'15.000đ/ lon',
             type: menuType.nuoc_ngot
         },
         {
             id: uuidv4(),
-            name: 'Vodka',
-            price:'100.000đ',
-            type: menuType.ruou
+            name: 'Sting',
+            price:'15.000đ/ lon',
+            type: menuType.nuoc_ngot
         },
         {
             id: uuidv4(),
-            name: 'Gin',
-            price:'100.000đ',
-            type: menuType.ruou
+            name: 'Bò húc',
+            price:'20.000đ/ lon',
+            type: menuType.nuoc_ngot
         },
         {
             id: uuidv4(),
-            name: 'Vermouth',
-            price:'100.000đ',
-            type: menuType.ruou
+            name: 'Trà xanh 0 độ',
+            price:'15.000đ/ chai',
+            type: menuType.nuoc_ngot
         },
         {
             id: uuidv4(),
-            name: 'Aquafina',
-            price:'100.000đ',
-            type: menuType.nuoc_suoi
-        },
-        {
-            id: uuidv4(),
-            name: 'Dasani',
-            price:'100.000đ',
-            type: menuType.nuoc_suoi
-        },
-        {
-            id: uuidv4(),
-            name: 'Satori',
-            price:'100.000đ',
+            name: 'Nước suối',
+            price:'10.000đ/ chai',
             type: menuType.nuoc_suoi
         }
     ]

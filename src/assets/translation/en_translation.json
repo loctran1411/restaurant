@@ -1,0 +1,11 @@
+{
+    "nav": {
+        "nav_item_intro": "Home",
+        "nav_item_menu": "Menu",
+        "nav_item_services": "Services",
+        "nav_item_contact": "Contact"
+    },
+    "info":{
+        "info_desc_1": "What make YenLongHai become special"
+    }
+}
