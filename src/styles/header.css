@@ -85,13 +85,13 @@
   /* visibility: hidden; */
 }
 
-.navbar-light .navbar-nav .nav-link {
+/* .navbar-light .navbar-nav .nav-link {
   color: #fff !important;
-}
+} */
 
-.navbar-light .navbar-nav .nav-link.active {
+/* .navbar-light .navbar-nav .nav-link.active {
   color: #e7b451 !important;
-}
+} */
 
 .show__menu .menu__tab {
   background-color: #2e3131;

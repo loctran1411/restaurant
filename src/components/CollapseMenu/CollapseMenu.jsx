@@ -44,10 +44,12 @@ const CollapseMenu = ({ menu, name_list_menu, thuc_uong, loai_thuc_uong }) => {
                                     thuc_uong.list_thuc_uong.map((data) => (
                                         <Col lg='6' md='6' sm='6' xs='6' key={data.id} className='collapse-menu-content_item'>
                                             <div className="content-detail">
-                                                <div className='name-price-drink'>
+                                                <div className="content-detail_img">
+                                                    <img src={data.img} alt="food-img" />
+                                                </div>
+                                                <div className='name-price-food'>
                                                     <h5>{data.name}</h5>
-                                                    <hr className='space'/>
-                                                    <p>{data.price}</p>
+                                                    <h6>{data.price}</h6>
                                                 </div>
                                             </div>
                                         </Col>

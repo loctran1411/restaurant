@@ -30,6 +30,18 @@ import oc_1 from '../images/menu/oc-1.png'
 import oc_2 from '../images/menu/oc-2.png'
 import oc_3 from '../images/menu/oc-3.png'
 import oc_4 from '../images/menu/oc-4.png'
+
+import Seven_up from '../images/thuc-uong/7up.png'
+import Bo_huc from '../images/thuc-uong/bohuc.png'
+import Coca from '../images/thuc-uong/coca.png'
+import Heineken from '../images/thuc-uong/heineken.png'
+import Nuoc_suoi from '../images/thuc-uong/nuoc-suoi.png'
+import Pepsi from '../images/thuc-uong/pepsi.png'
+import Sting from '../images/thuc-uong/sting.png'
+import Tiger_bac from '../images/thuc-uong/tiger-bac.png'
+import Tiger_nau from '../images/thuc-uong/tiger-nau.png'
+import Tra_xanh_0_do from '../images/thuc-uong/tra-xanh-0-do.png'
+
 import { v4 as uuidv4 } from 'uuid';
 
 export const name_list_menu = {
@@ -344,61 +356,71 @@ export const thuc_uong = {
             id: uuidv4(),
             name: 'Tiger Nâu',
             price:'19.000đ/ lon',
-            type: menuType.bia
+            type: menuType.bia,
+            img: Tiger_nau
         },
         {
             id: uuidv4(),
             name: 'Tiger Bạc',
             price:'20.000đ/ lon',
-            type: menuType.bia
+            type: menuType.bia,
+            img: Tiger_bac
         },
         {
             id: uuidv4(),
             name: 'Heineken',
             price:'22.000đ/ lon',
-            type: menuType.bia
+            type: menuType.bia,
+            img: Heineken
         },
         {
             id: uuidv4(),
             name: 'Coca',
             price:'15.000đ/ lon',
-            type: menuType.nuoc_ngot
+            type: menuType.nuoc_ngot,
+            img: Coca
         },
         {
             id: uuidv4(),
             name: 'Pepsi',
             price:'15.000đ/ lon',
-            type: menuType.nuoc_ngot
+            type: menuType.nuoc_ngot,
+            img: Pepsi
         },
         {
             id: uuidv4(),
             name: '7Up',
             price:'15.000đ/ lon',
-            type: menuType.nuoc_ngot
+            type: menuType.nuoc_ngot,
+            img: Seven_up
         },
         {
             id: uuidv4(),
             name: 'Sting',
             price:'15.000đ/ lon',
-            type: menuType.nuoc_ngot
+            type: menuType.nuoc_ngot,
+            img: Sting
         },
         {
             id: uuidv4(),
             name: 'Bò húc',
             price:'20.000đ/ lon',
-            type: menuType.nuoc_ngot
+            type: menuType.nuoc_ngot,
+            img: Bo_huc
         },
         {
             id: uuidv4(),
             name: 'Trà xanh 0 độ',
             price:'15.000đ/ chai',
-            type: menuType.nuoc_ngot
+            type: menuType.nuoc_ngot,
+            img: Tra_xanh_0_do
         },
         {
             id: uuidv4(),
             name: 'Nước suối',
             price:'10.000đ/ chai',
-            type: menuType.nuoc_suoi
+            type: menuType.nuoc_suoi,
+            img: Nuoc_suoi
         }
     ]
 }

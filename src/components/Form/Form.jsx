@@ -1,11 +1,14 @@
 import React, { useRef, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import "../../styles/form.css";
+import moment from 'moment/moment';
 
 const Form = () => {
+    let dateFormat = moment().format("D-MM-YYYY, h:mm:ss a");
+
     const formRef = useRef(null)
     const [loading, setLoading] = useState(false)
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbw4BH3nHCBp7kl5_exUmVowUlT_oYTsqbvJ05kdI7Y2bUS31nO9pyD3lO6YuwczNfCuLQ/exec"
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbz4MQbqgk0lGiRZcunJZjq7jzv3WdHgVxt0fth7arLA9_PkniLc7LDOFrtFcUVIyGatRA/exec"
 
     function Submit(e) {
         e.preventDefault();
@@ -19,7 +22,6 @@ const Form = () => {
             setLoading(false)
         }).catch(err => console.log(err))
     }
-
     return (
         <Container>
             <Row>
@@ -48,12 +50,12 @@ const Form = () => {
                             <div className="date-time-place">
                                 <div className="form-inp-item">
                                     <label className="form-inp-label" htmlFor="date">Ngày</label>
-                                    <input className='inp' type="date" name="Date" id="date" lang="vi-VN" />
+                                    <input defaultValue={dateFormat} className='inp' type="datetime-local" name="DateTime" id="date" lang="vi-VN" />
                                 </div>
-                                <div className="form-inp-item">
+                                {/* <div className="form-inp-item">
                                     <label className="form-inp-label" htmlFor="time">Giờ</label>
                                     <input className='inp' type="time" name="Time" id="time" lang="vi-VN" />
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="form-inp-item">

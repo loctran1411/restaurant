@@ -67,7 +67,7 @@ const Home = () => {
         </Container>
       </section>
     
-      <section id='thuc-don'></section>
+      <section id='mon-ban-chay'></section>
       <section className="pt-0" >
         <Col lg='12' className='text-center'>
         </Col>

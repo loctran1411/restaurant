@@ -47,7 +47,9 @@ const Header = () => {
 
         {/* ======== nav right icons ========= */}
         <div className="nav__right d-flex align-items-center gap-4 p-0">
-          <div>
+
+          {/* change language */}
+          {/* <div>
             <select defaultValue={i18n.language} onChange={handleTrans}>
               {lngs.map(({ code, native }) => (
                 <option key={code} value={code}>
@@ -55,15 +57,21 @@ const Header = () => {
                 </option>
               ))}
             </select>
-          </div>
+          </div> */}
+
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5 menu__tab">
               <Navbar>
-                <Nav className="nav-bar">
+                {/* <Nav className="nav-bar">
                   <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#gioi-thieu">{t('nav.nav_item_intro')}</Nav.Link>
                   <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#thuc-don">{t('nav.nav_item_menu')}</Nav.Link>
                   <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#dich-vu">{t('nav.nav_item_services')}</Nav.Link>
                   <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#lien-he">{t('nav.nav_item_contact')}</Nav.Link>
+                </Nav> */}
+                <Nav className="nav-bar">
+                  <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#gioi-thieu">Giới thiệu</Nav.Link>
+                  <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#thuc-don">Thực đơn</Nav.Link>
+                  <Nav.Link className={(navClass) => navClass.isActive ? "active__menu" : ""} href="#lien-he">Liên hệ</Nav.Link>
                 </Nav>
               </Navbar>
             </div>

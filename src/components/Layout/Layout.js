@@ -5,11 +5,13 @@ import Routes from '../../routes/Routers'
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MultipleButton from '../ScrollToTop/MultipleButton'
+import HeaderV2 from '../Header/HeaderV2';
 
 const Layout = () => {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
+            <HeaderV2/>
             <div>
                 <Routes />
             </div>
