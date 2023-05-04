@@ -7,7 +7,7 @@ import En_Trans from './assets/translation/en_translation.json'
 i18n
     .use(initReactI18next)
     .init({
-        debug: true,
+        debug: false,
         fallbackLng: 'vn',
         interpolation: {
             escapeValue: false, // not needed for react as it escapes by default
