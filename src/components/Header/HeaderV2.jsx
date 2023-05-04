@@ -1,64 +1,128 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from "../../assets/images/logo_yen.png";
 import './headerv2.css'
-import '../helper/Navbar.js'
+// import '../helper/Navbar.js'
 
 const HeaderV2 = () => {
+
+  useEffect(() => {
+    const openNavMenu = document.querySelector(".open-nav-menu"),
+      closeNavMenu = document.querySelector(".close-nav-menu"),
+      navMenu = document.querySelector(".nav-menu"),
+      menuOverlay = document.querySelector(".menu-overlay"),
+      mediaSize = 991;
+
+    function toggleNav() {
+      navMenu.classList.toggle("open");
+      menuOverlay.classList.toggle("active");
+      document.body.classList.toggle("hidden-scrolling");
+    }
+
+    openNavMenu.addEventListener("click", toggleNav);
+    closeNavMenu.addEventListener("click", toggleNav);
+    // close the navMenu by clicking outside
+    menuOverlay.addEventListener("click", toggleNav);
+
+    navMenu.addEventListener("click", (event) => {
+      if (event.target.hasAttribute("data-toggle") &&
+        window.innerWidth <= mediaSize) {
+        // prevent default anchor click behavior
+        event.preventDefault();
+        const menuItemHasChildren = event.target.parentElement;
+        // if menuItemHasChildren is already expanded, collapse it
+        if (menuItemHasChildren.classList.contains("active")) {
+          collapseSubMenu();
+        }
+        else {
+          // collapse existing expanded menuItemHasChildren
+          if (navMenu.querySelector(".menu-item-has-children.active")) {
+            collapseSubMenu();
+          }
+          // expand new menuItemHasChildren
+          menuItemHasChildren.classList.add("active");
+          const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+        }
+      }
+    });
+    function collapseSubMenu() {
+      navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+        .removeAttribute("style");
+      navMenu.querySelector(".menu-item-has-children.active")
+        .classList.remove("active");
+    }
+    function resizeFix() {
+      // if navMenu is open ,close it
+      if (navMenu.classList.contains("open")) {
+        toggleNav();
+      }
+      // if menuItemHasChildren is expanded , collapse it
+      if (navMenu.querySelector(".menu-item-has-children.active")) {
+        collapseSubMenu();
+      }
+    }
+
+    window.addEventListener("resize", function () {
+      if (this.innerWidth > mediaSize) {
+        resizeFix();
+      }
+    });
+  }, [])
 
   return (
     <>
       <header className="header">
         {/* <div className="container"> */}
-          <div className="header-main">
-            <div className="logo">
-              <a href="#">Logo</a>
-            </div>
-            <div className="open-nav-menu">
-              <span></span>
-            </div>
-            <div className="menu-overlay">
-            </div>
-            <nav className="nav-menu">
-              <div className="close-nav-menu">
-                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/turn-off-button-red-icon.svg" alt="close" />
-              </div>
-              <ul className="menu">
-                <li className="menu-item menu-item-has-children">
-                  <a href="#" data-toggle="sub-menu">Home <i className="plus"></i></a>
-                  <ul className="sub-menu">
-                    <li className="menu-item"><a href="#">Home 1</a></li>
-                    <li className="menu-item"><a href="#">Home 2</a></li>
-                    <li className="menu-item"><a href="#">Home 3</a></li>
-                    <li className="menu-item"><a href="#">Home 4</a></li>
-                  </ul>
-                </li>
-                <li className="menu-item">
-                  <a href="#">About</a>
-                </li>
-                <li className="menu-item">
-                  <a href="#">Services</a>
-                </li>
-                <li className="menu-item menu-item-has-children">
-                  <a href="#" data-toggle="sub-menu">Pages <i className="plus"></i></a>
-                  <ul className="sub-menu">
-                    <li className="menu-item"><a href="#">page 1</a></li>
-                    <li className="menu-item"><a href="#">page 2</a></li>
-                    <li className="menu-item"><a href="#">page 3</a></li>
-                    <li className="menu-item"><a href="#">page 4</a></li>
-                  </ul>
-                </li>
-                <li className="menu-item">
-                  <a href="#">News</a>
-                </li>
-                <li className="menu-item">
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
+        <div className="header-main">
+          <div className="logo">
+            <a href="#">Logo</a>
           </div>
+          <div className="open-nav-menu">
+            <span></span>
+          </div>
+          <div className="menu-overlay">
+          </div>
+          <nav className="nav-menu">
+            <div className="close-nav-menu">
+              <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/turn-off-button-red-icon.svg" alt="close" />
+            </div>
+            <ul className="menu">
+              <li className="menu-item menu-item-has-children">
+                <a href="#" data-toggle="sub-menu">Home <i className="plus"></i></a>
+                <ul className="sub-menu">
+                  <li className="menu-item"><a href="#">Home 1</a></li>
+                  <li className="menu-item"><a href="#">Home 2</a></li>
+                  <li className="menu-item"><a href="#">Home 3</a></li>
+                  <li className="menu-item"><a href="#">Home 4</a></li>
+                </ul>
+              </li>
+              <li className="menu-item">
+                <a href="#">About</a>
+              </li>
+              <li className="menu-item">
+                <a href="#">Services</a>
+              </li>
+              <li className="menu-item menu-item-has-children">
+                <a href="#" data-toggle="sub-menu">Pages <i className="plus"></i></a>
+                <ul className="sub-menu">
+                  <li className="menu-item"><a href="#">page 1</a></li>
+                  <li className="menu-item"><a href="#">page 2</a></li>
+                  <li className="menu-item"><a href="#">page 3</a></li>
+                  <li className="menu-item"><a href="#">page 4</a></li>
+                </ul>
+              </li>
+              <li className="menu-item">
+                <a href="#">News</a>
+              </li>
+              <li className="menu-item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         {/* </div> */}
       </header>
     </>
