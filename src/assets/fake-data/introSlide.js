@@ -1,5 +1,6 @@
 import nha_hang1 from '../images/nha-hang1.jpg'
 import nha_hang2 from '../images/nha-hang2.jpg'
+import nha_hang3 from '../images/nha-hang3.jpg'
 import { v4 as uuidv4 } from 'uuid';
 
 export const introSlide = {
@@ -12,6 +13,11 @@ export const introSlide = {
     {
       id: uuidv4(),
       src: nha_hang2,
+      alt: 'view'
+    },
+    {
+      id: uuidv4(),
+      src: nha_hang3,
       alt: 'view'
     }
   ],

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import "../../styles/form.css";
 import moment from 'moment/moment';
@@ -22,6 +22,13 @@ const Form = () => {
             setLoading(false)
         }).catch(err => console.log(err))
     }
+
+    useEffect(() => {
+        var today = new Date().toISOString().slice(0, 16);
+
+        document.getElementsByName("DateTime")[0].min = today;
+    }, [])
+
     return (
         <Container>
             <Row>
@@ -34,33 +41,27 @@ const Form = () => {
                         <form className="form-inp" onSubmit={(e) => Submit(e)} ref={formRef}>
                             <div className="form-inp-item">
                                 <label htmlFor="name" className="form-inp-label">Họ và tên</label>
-                                <input className='inp' placeholder="Họ Tên..." name="Name" type="text" id="name" />
+                                <input className='inp' placeholder="Nhập tên" name="Name" type="text" id="name" />
                             </div>
 
                             <div className="form-inp-item">
                                 <label htmlFor="phone" className="form-inp-label">Số điện thoại</label>
-                                <input className='inp' placeholder="Sđt.." name="Email" type="number" id="phone" />
+                                <input className='inp' placeholder="Nhập số điện thoại" name="Email" type="number" id="phone" />
                             </div>
 
                             <div className="form-inp-item">
                                 <label htmlFor="customers" className="form-inp-label">Số lượng khách</label>
-                                <input className='inp' placeholder="Số lượng..." name="Message" type="number" id='customers' />
+                                <input className='inp' placeholder="Nhập số lượng" name="Message" type="number" id='customers' />
                             </div>
 
-                            <div className="date-time-place">
-                                <div className="form-inp-item">
-                                    <label className="form-inp-label" htmlFor="date">Ngày</label>
-                                    <input defaultValue={dateFormat} className='inp' type="datetime-local" name="DateTime" id="date" lang="vi-VN" />
-                                </div>
-                                {/* <div className="form-inp-item">
-                                    <label className="form-inp-label" htmlFor="time">Giờ</label>
-                                    <input className='inp' type="time" name="Time" id="time" lang="vi-VN" />
-                                </div> */}
+                            <div className="form-inp-item">
+                                <label className="form-inp-label" htmlFor="date">Ngày</label>
+                                <input defaultValue={dateFormat} className='inp' type="datetime-local" name="DateTime" id="date" lang="vi-VN" />
                             </div>
 
                             <div className="form-inp-item">
                                 <label className="form-inp-label" htmlFor="note">Yêu cầu khác</label>
-                                <textarea className='inp' name="Note" id="note" cols="10" rows="10" placeholder="..."></textarea>
+                                <textarea className='inp' name="Note" id="note" cols="10" rows="10" placeholder="Nhập yêu cầu"></textarea>
                             </div>
 
                             <input className='btn-submit' name="Name" type="submit" value={loading ? "Vui lòng chờ..." : "Gửi"} />

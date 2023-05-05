@@ -9,7 +9,7 @@ import menuToSearch from '../assets/fake-data/menuToSearch'
 import info from '../assets/fake-data/info.js'
 
 import CarouselSlider from '../components/Carousel/CarouselSlider'
-import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
+// import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
 import Menu from '../components/UI/menu/Menu'
 import Form from '../components/Form/Form'
 import CollapseMenu from '../components/CollapseMenu/CollapseMenu'
@@ -57,12 +57,12 @@ const Home = () => {
               }
             </div>
 
-            <div className="hero__img">
+            {/* <div className="hero__img">
               <div>
                 <SubCarouselSlider />
               </div>
 
-            </div>
+            </div> */}
           </div>
         </Container>
       </section>

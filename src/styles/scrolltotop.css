@@ -228,7 +228,7 @@
 /* For medium devices */
 @media screen and (max-width: 768px) {
     .show-scroll {
-        bottom: 4rem;
+        bottom: 1rem;
     }
 
     .modal-content {
