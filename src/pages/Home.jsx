@@ -57,12 +57,12 @@ const Home = () => {
               }
             </div>
 
-            <div className="hero__img">
+            {/* <div className="hero__img">
               <div>
                 <SubCarouselSlider />
               </div>
 
-            </div>
+            </div> */}
           </div>
         </Container>
       </section>
