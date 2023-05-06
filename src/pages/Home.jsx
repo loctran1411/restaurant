@@ -62,7 +62,7 @@ const Home = () => {
                 <SubCarouselSlider />
               </div>
 
-            </div> */}
+            </div>  */}
           </div>
         </Container>
       </section>
