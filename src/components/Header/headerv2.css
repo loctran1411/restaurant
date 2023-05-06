@@ -47,11 +47,16 @@ ul {
 
 .header .menu>.menu-item>a {
   display: block;
-  padding: 12px 0;
+  padding: 12px 5px;
   font-size: 16px;
   text-transform: capitalize;
   font-weight: 600;
   transition: all 0.3s ease;
+}
+
+.header .menu>.menu-item>a:hover{
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 .header .menu>.menu-item>a .plus {
@@ -89,6 +94,10 @@ ul {
 .header .menu>.menu-item>.sub-menu>.menu-item>a:hover,
 .header .menu>.menu-item:hover>a {
   color: #e91e63;
+}
+
+.header .menu>.menu-item>.sub-menu>.menu-item>a:hover{
+  background: #2e3131;
 }
 
 .header .menu>.menu-item>.sub-menu {
