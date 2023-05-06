@@ -8,6 +8,7 @@
   height: 350px;
   object-fit: fill;
   /* border-radius: 30px; */
+  border: 20px solid white;
 }
 
 .carousel.carousel-slider .control-arrow {

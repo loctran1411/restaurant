@@ -7,7 +7,7 @@ const SubCarouselSlider = () => {
     return (
         <Carousel autoPlay interval="3000" transitionTime="1000" showThumbs={false} infiniteLoop={true}>
             {
-                introSlide.food_slide.map((i) => (
+                introSlide.view_lobby.map((i) => (
                     <div key={i.id}>
                         <img alt={i.alt} src={i.src} className='sub_carousel_img' />
                     </div>

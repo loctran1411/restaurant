@@ -25,7 +25,6 @@ const Form = () => {
 
     useEffect(() => {
         var today = new Date().toISOString().slice(0, 16);
-
         document.getElementsByName("DateTime")[0].min = today;
     }, [])
 

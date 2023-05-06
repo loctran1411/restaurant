@@ -31,8 +31,12 @@
   list-style-type: none;
 }
 
-.hero__content-info li{
+.hero__content-info li {
   padding: 10px 0;
+}
+
+.hero__content-info .hero__content-info-lobby {
+  font-size: 25px;
 }
 
 .hero__content h5 {
@@ -40,6 +44,11 @@
   border-bottom: 1px solid #000;
   padding: 10px;
   font-family: 'Lobster', cursive;
+}
+
+.hero__content .hero__content-lobby-title {
+  font-size: 45px;
+  text-align: center;
 }
 
 .order__btn {
@@ -111,6 +120,14 @@
     border: 2px solid white;
   }
 
+  .hero__content .hero__content-lobby-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .hero__content-info .hero__content-info-lobby {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 992px) {

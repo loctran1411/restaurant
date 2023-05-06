@@ -9,7 +9,7 @@ import menuToSearch from '../assets/fake-data/menuToSearch'
 import info from '../assets/fake-data/info.js'
 
 import CarouselSlider from '../components/Carousel/CarouselSlider'
-// import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
+import SubCarouselSlider from '../components/Carousel/SubCarouselSlider'
 import Menu from '../components/UI/menu/Menu'
 import Form from '../components/Form/Form'
 import CollapseMenu from '../components/CollapseMenu/CollapseMenu'
@@ -57,24 +57,24 @@ const Home = () => {
               }
             </div>
 
-            {/* <div className="hero__img">
+            <div className="hero__img">
               <div>
                 <SubCarouselSlider />
               </div>
 
-            </div> */}
+            </div>
           </div>
         </Container>
       </section>
-    
-      <section id='mon-ban-chay'></section>
+
+      <div id='mon-ban-chay'></div>
       <section className="pt-0" >
-        <Col lg='12' className='text-center'>
-        </Col>
+        {/* <Col lg='12' className='text-center'>
+        </Col> */}
         <Menu />
       </section>
 
-      <section>
+      <div>
         <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca} />
 
         <CollapseMenu menu={menu.cahap} name_list_menu={name_list_menu.cate_cahap} />
@@ -88,7 +88,7 @@ const Home = () => {
         <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau} />
 
         <CollapseMenu thuc_uong={thuc_uong} name_list_menu={name_list_menu.cate_thuc_uong} loai_thuc_uong={loai_thuc_uong} />
-      </section>
+      </div>
 
       {/* <div>
         <div className="parallax">
@@ -147,7 +147,37 @@ const Home = () => {
         </div>
       </div> */}
 
-      <section>
+      <section id="sanh-tiec"></section>
+      <section className='hero_info'>
+        <Container>
+          <div className="hero">
+            <div class="hero__content">
+              {
+                infomation?.map((i, index) => (
+                  <div className="hero__content" key={index}>
+                    <h5 className='hero__content-lobby-title'>{t('info.intro_lobby_title')}</h5>
+                    <ul className="hero__content-info">
+                      <li className="hero__content-info-lobby">{i.intro_lobby}</li>
+                    </ul>
+
+                    <div className="hero__btns d-flex align-items-center gap-5">
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+
+            <div className="hero__img">
+              <div>
+                <SubCarouselSlider />
+              </div>
+
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section id="dat-ban">
         <Form />
       </section>
 

@@ -97,6 +97,12 @@ const HeaderV2 = () => {
                 <a href="#mon-ban-chay">Món bán chạy</a>
               </li>
               <li className="menu-item">
+                <a href="#sanh-tiec">Sảnh tiệc</a>
+              </li>
+              <li className="menu-item">
+                <a href="#dat-ban">Đặt bàn</a>
+              </li>
+              <li className="menu-item">
                 <a href="#lien-he">Liên hệ</a>
               </li>
               <li className="menu-item menu-item-has-children">
