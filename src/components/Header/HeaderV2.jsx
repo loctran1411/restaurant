@@ -1,8 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_yen.png";
-import closeIcon from '../../assets/images/close.png'
-import openNav from '../../assets/images/menu-icon.png'
+import closeIcon from '../../assets/icon/close.png'
+import openNav from '../../assets/icon/menu-icon.png'
+
+import home_icon from '../../assets/icon/home.png'
+import best_seller_icon from '../../assets/icon/best-seller.png'
+import lobby_icon from '../../assets/icon/lift.png'
+import booking_icon from '../../assets/icon/restaurant.png'
+import contact_icon from '../../assets/icon/contacting.png'
+import more_lobby_icon from '../../assets/icon/menu.png'
+
 import './headerv2.css'
 
 const HeaderV2 = () => {
@@ -91,22 +99,22 @@ const HeaderV2 = () => {
             </div>
             <ul className="menu">
               <li className="menu-item">
-                <a href="#gioi-thieu">Giới thiệu</a>
+                <a href="#gioi-thieu"><img src={home_icon} alt="home" /> Giới thiệu</a>
               </li>
               <li className="menu-item">
-                <a href="#mon-ban-chay">Món bán chạy</a>
+                <a href="#mon-ban-chay"><img src={best_seller_icon} alt="best-seller" /> Món bán chạy</a>
               </li>
               <li className="menu-item">
-                <a href="#sanh-tiec">Sảnh tiệc</a>
+                <a href="#sanh-tiec"><img src={lobby_icon} alt="lobby" /> Sảnh tiệc</a>
               </li>
               <li className="menu-item">
-                <a href="#dat-ban">Đặt bàn</a>
+                <a href="#dat-ban"><img src={booking_icon} alt="booking" /> Đặt bàn</a>
               </li>
               <li className="menu-item">
-                <a href="#lien-he">Liên hệ</a>
+                <a href="#lien-he"><img src={contact_icon} alt="contact" /> Liên hệ</a>
               </li>
               <li className="menu-item menu-item-has-children">
-                <a href="#" data-toggle="sub-menu">Dropdown <i className="plus"></i></a>
+                <a href="#" data-toggle="sub-menu"><img src={more_lobby_icon} alt="more-lobby" /> Sảnh <i className="plus"></i></a>
                 <ul className="sub-menu">
                   <li className="menu-item"><a href="#">Home 1</a></li>
                   <li className="menu-item"><a href="#">Home 2</a></li>

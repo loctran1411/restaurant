@@ -56,13 +56,6 @@ const Home = () => {
                 ))
               }
             </div>
-
-            {/* <div className="hero__img">
-              <div>
-                <SubCarouselSlider />
-              </div>
-
-            </div>  */}
           </div>
         </Container>
       </section>
@@ -75,77 +68,23 @@ const Home = () => {
       </section>
 
       <div>
+        <CollapseMenu menu={menu.khaivi} name_list_menu={name_list_menu.cate_khaivi} />
         <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca} />
-
         <CollapseMenu menu={menu.cahap} name_list_menu={name_list_menu.cate_cahap} />
-
         <CollapseMenu menu={menu.ghe} name_list_menu={name_list_menu.cate_ghe} />
-
         <CollapseMenu menu={menu.oc} name_list_menu={name_list_menu.cate_oc} />
-
         <CollapseMenu menu={menu.mongtay} name_list_menu={name_list_menu.cate_mongtay} />
-
         <CollapseMenu menu={menu.lau} name_list_menu={name_list_menu.cate_lau} />
-
+        <CollapseMenu menu={menu.thit} name_list_menu={name_list_menu.cate_thit} />
+        <CollapseMenu menu={menu.ga} name_list_menu={name_list_menu.cate_ga} />
+        <CollapseMenu menu={menu.tom} name_list_menu={name_list_menu.cate_tom} />
+        <CollapseMenu menu={menu.ochuong} name_list_menu={name_list_menu.cate_oc_huong} />
+        <CollapseMenu menu={menu.sodiep} name_list_menu={name_list_menu.cate_so_diep} />
+        <CollapseMenu menu={menu.hau} name_list_menu={name_list_menu.cate_hau} />
+        <CollapseMenu menu={menu.comchien} name_list_menu={name_list_menu.cate_com_chien} />
+        <CollapseMenu menu={menu.chao} name_list_menu={name_list_menu.cate_chao} />
         <CollapseMenu thuc_uong={thuc_uong} name_list_menu={name_list_menu.cate_thuc_uong} loai_thuc_uong={loai_thuc_uong} />
       </div>
-
-      {/* <div>
-        <div className="parallax">
-          <div className='parallax_content'>
-            <div className="parallax_content-title">
-              <h3>Thức uống</h3>
-            </div>
-            <Container>
-              <Row>
-                <Col lg='6' md='6'>
-                  <div className='parallax_content-item'>
-                    <ul>
-                      <li>Bia - (Thùng, Két, Lốc, Lon)
-                        <ul>
-                          <li>Tiger</li>
-                          <li>Heineken</li>
-                          <li>333</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-
-                <Col lg='6' md='6'>
-                  <div className='parallax_content-item'>
-                    <ul>
-                      <li>Rượu - (Chai)
-                        <ul>
-                          <li>Vodka</li>
-                          <li>Gin</li>
-                          <li>Vermouth</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-
-                <Col lg='6' md='6'>
-                  <div className='parallax_content-item'>
-                    <ul>
-                      <li>Nước ngọt - (Thùng, Két, Lốc, Lon)
-                        <ul>
-                          <li>Coca</li>
-                          <li>Pepsi</li>
-                          <li>7Up</li>
-                        </ul>
-                      </li>
-                      <li>Nước lọc - (Chai)</li>
-                    </ul>
-                  </div>
-                </Col>
-
-              </Row>
-            </Container>
-          </div>
-        </div>
-      </div> */}
 
       <section id="sanh-tiec"></section>
       <section className='hero_info'>
