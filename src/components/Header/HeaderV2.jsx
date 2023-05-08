@@ -1,17 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_yen.png";
 import closeIcon from '../../assets/icon/close.png'
 import openNav from '../../assets/icon/menu-icon.png'
-
-import home_icon from '../../assets/icon/home.png'
-import best_seller_icon from '../../assets/icon/best-seller.png'
-import lobby_icon from '../../assets/icon/lift.png'
-import booking_icon from '../../assets/icon/restaurant.png'
-import contact_icon from '../../assets/icon/contacting.png'
 import more_lobby_icon from '../../assets/icon/menu.png'
-
+import { navItem, dropdownNavbar } from '../../assets/fake-data/navItem'
 import './headerv2.css'
+import { Modal, Button } from 'react-bootstrap';
+
+function CustomModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <div className='modal_img'>
+          <img src={props.img} alt="lobby img" />
+        </div>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Đóng</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
 const HeaderV2 = () => {
 
@@ -79,17 +98,19 @@ const HeaderV2 = () => {
     });
   }, [])
 
+  const [modalShow, setModalShow] = useState(false);
+  const [dropdownImg, setDropdownImg] = useState({})
+
   return (
     <>
       <header className="header">
-        {/* <div className="container"> */}
         <div className="header-main">
           <div className="logo">
             <Link to={'/'}><img src={logo} alt="logo" className='logo_img' /></Link>
           </div>
           <div className="open-nav-menu">
             {/* <span></span> */}
-            <img src={openNav} alt="open"/>
+            <img src={openNav} alt="open" />
           </div>
           <div className="menu-overlay">
           </div>
@@ -98,34 +119,38 @@ const HeaderV2 = () => {
               <img src={closeIcon} alt="close" />
             </div>
             <ul className="menu">
-              <li className="menu-item">
-                <a href="#gioi-thieu"><img src={home_icon} alt="home" /> Giới thiệu</a>
-              </li>
-              <li className="menu-item">
-                <a href="#mon-ban-chay"><img src={best_seller_icon} alt="best-seller" /> Món bán chạy</a>
-              </li>
-              <li className="menu-item">
-                <a href="#sanh-tiec"><img src={lobby_icon} alt="lobby" /> Sảnh tiệc</a>
-              </li>
-              <li className="menu-item">
-                <a href="#dat-ban"><img src={booking_icon} alt="booking" /> Đặt bàn</a>
-              </li>
-              <li className="menu-item">
-                <a href="#lien-he"><img src={contact_icon} alt="contact" /> Liên hệ</a>
-              </li>
+              {
+                navItem.map((i) => (
+                  <li className="menu-item" key={i.id}>
+                    <a href={i.href}><img src={i.icon} alt={i.alt} />{i.name}</a>
+                  </li>
+                ))
+              }
+
               <li className="menu-item menu-item-has-children">
-                <a href="#" data-toggle="sub-menu"><img src={more_lobby_icon} alt="more-lobby" /> Sảnh <i className="plus"></i></a>
+                <a href="#sanh-tiec" data-toggle="sub-menu"><img src={more_lobby_icon} alt="more-lobby" /> Sảnh <i className="plus"></i></a>
                 <ul className="sub-menu">
-                  <li className="menu-item"><a href="#">Home 1</a></li>
-                  <li className="menu-item"><a href="#">Home 2</a></li>
-                  <li className="menu-item"><a href="#">Home 3</a></li>
-                  <li className="menu-item"><a href="#">Home 4</a></li>
+                  {
+                    dropdownNavbar.map((i) => (
+                      <li className="menu-item" key={i.id}>
+                        <a href="#" onClick={() => {
+                          setModalShow(true)
+                          setDropdownImg(i.img)
+                        }}>{i.title}</a>
+
+                      </li>
+                    ))
+                  }
+                  <CustomModal
+                    show={modalShow}
+                    img={dropdownImg}
+                    onHide={() => setModalShow(false)}
+                  />
                 </ul>
               </li>
             </ul>
           </nav>
         </div>
-        {/* </div> */}
       </header>
     </>
   )

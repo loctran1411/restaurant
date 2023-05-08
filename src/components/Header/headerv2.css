@@ -202,8 +202,16 @@ ul {
   transition: all 0.3s ease;
 }
 
-/* responsive */
+.modal-content {
+  padding: 0 !important;
+  top: 45px;
+}
 
+.modal_img img {
+  width: 100%;
+}
+
+/* responsive */
 @media(min-width: 992px) {
   .header .menu>.menu-item-has-children:hover>.sub-menu {
     transform: translateY(0);
@@ -215,6 +223,10 @@ ul {
   .header .menu>.menu-item-has-children:hover>a .plus:after {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
+  .modal.show .modal-dialog {
+    justify-content: center;
+  }
 }
 
 @media(max-width: 768px) {
@@ -222,6 +234,9 @@ ul {
     display: flex;
     justify-content: space-between;
     padding: 0;
+  }
+  .modal-content{
+    width: 100% !important;
   }
 }
 
