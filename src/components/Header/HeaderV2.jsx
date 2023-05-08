@@ -136,7 +136,7 @@ const HeaderV2 = () => {
                         <a href="#" onClick={() => {
                           setModalShow(true)
                           setDropdownImg(i.img)
-                        }}>{i.title}</a>
+                        }}><img src={i.icon} alt="arrow" />{i.title}</a>
 
                       </li>
                     ))

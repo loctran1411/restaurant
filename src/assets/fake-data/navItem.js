@@ -1,8 +1,9 @@
 import home_icon from '../icon/home.png'
 import best_seller_icon from '../icon/best-seller.png'
-import lobby_icon from '../icon/lift.png'
+// import lobby_icon from '../icon/lift.png'
 import booking_icon from '../icon/restaurant.png'
 import contact_icon from '../icon/contacting.png'
+import right_arrow from '../icon/right-arrow.png'
 
 import sanh_1 from '../images/sanh-1.jpg'
 import sanh_2 from '../images/sanh-2.jpg'
@@ -50,16 +51,19 @@ export const dropdownNavbar = [
     {
         id: 1,
         title: "Sảnh 1",
-        img: sanh_1
+        img: sanh_1,
+        icon: right_arrow
     },
     {
         id: 2,
         title: "Sảnh 2",
-        img: sanh_2
+        img: sanh_2,
+        icon: right_arrow
     },
     {
         id: 3,
         title: "Sảnh 3",
-        img: sanh_3
+        img: sanh_3,
+        icon: right_arrow
     }
 ]

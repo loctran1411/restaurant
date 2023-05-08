@@ -100,6 +100,10 @@ ul {
   background: #2e3131;
 }
 
+.header .menu>.menu-item>.sub-menu>.menu-item>a>img {
+  margin: 0px 5px 5px 0px;
+}
+
 .header .menu>.menu-item>a>img {
   padding: 0px 5px 5px 0;
 }
@@ -235,7 +239,8 @@ ul {
     justify-content: space-between;
     padding: 0;
   }
-  .modal-content{
+
+  .modal-content {
     width: 100% !important;
   }
 }
