@@ -66,7 +66,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col lg="6" md="6">
             <p className="copyright__text">
-              {/* 2023 &#9997; Ng Chg Tu */}
+              2023 &#9997; <a href="https://ngchungtu.vercel.app/">Ng Chung Tu</a>
             </p>
           </Col>
           {/* <Col lg="6" md="6">

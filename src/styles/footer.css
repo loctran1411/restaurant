@@ -93,6 +93,12 @@
   color: #df2020;
 }
 
+.copyright__text a:hover{
+  font-weight: bold;
+  color: #df2020;
+  text-decoration: underline;
+}
+
 .hello__footer {
   text-align: center;
 }
