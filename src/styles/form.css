@@ -49,6 +49,10 @@
     margin: 20px 5px 0 0;
 }
 
+.react-datepicker .react-datepicker__triangle{
+    left: -80% !important;
+}
+
 @media only screen and (max-width: 992px) {}
 
 @media only screen and (max-width: 768px) {}

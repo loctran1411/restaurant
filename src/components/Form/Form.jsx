@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import "../../styles/form.css";
-import moment from 'moment/moment';
+// import moment from 'moment/moment';
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
 
 const Form = () => {
-    let dateFormat = moment().format("D-MM-YYYY, h:mm:ss a");
+    const [startDate, setStartDate] = useState(new Date());
+    // let dateFormat = moment().format("D-MM-YYYY, h:mm:ss a");
 
     const formRef = useRef(null)
     const [loading, setLoading] = useState(false)
@@ -23,10 +26,10 @@ const Form = () => {
         }).catch(err => console.log(err))
     }
 
-    useEffect(() => {
-        var today = new Date().toISOString().slice(0, 16);
-        document.getElementsByName("DateTime")[0].min = today;
-    }, [])
+    // useEffect(() => {
+    //     var today = new Date().toISOString().slice(0, 16);
+    //     document.getElementsByName("DateTime")[0].min = today;
+    // }, [])
 
     return (
         <Container>
@@ -55,7 +58,19 @@ const Form = () => {
 
                             <div className="form-inp-item">
                                 <label className="form-inp-label" htmlFor="date">Ngày</label>
-                                <input defaultValue={dateFormat} className='inp' type="datetime-local" name="DateTime" id="date" lang="vi-VN" />
+                                {/* <input defaultValue={dateFormat} className='inp' type="datetime-local" name="DateTime" id="date" lang="vi-VN" /> */}
+                                <DatePicker
+                                    selected={startDate}
+                                    onChange={(date) => setStartDate(date)}
+                                    timeInputLabel="Time:"
+                                    dateFormat="MM/dd/yyyy h:mm aa"
+                                    showTimeSelect
+                                    timeFormat="p"
+                                    timeIntervals={15}
+                                    minDate={new Date()}
+                                    className='inp'
+                                    name="DateTime" id="date"
+                                />
                             </div>
 
                             <div className="form-inp-item">
@@ -73,3 +88,4 @@ const Form = () => {
 }
 
 export default Form
+// https://reactdatepicker.com/#example-select-time
