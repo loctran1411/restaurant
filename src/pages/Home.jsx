@@ -67,6 +67,9 @@ const Home = () => {
         <Menu />
       </section>
 
+      <div id='thuc-don' className='menu_section'>
+        <h2>Thực đơn</h2>
+      </div>
       <div>
         <CollapseMenu menu={menu.khaivi} name_list_menu={name_list_menu.cate_khaivi} />
         <CollapseMenu menu={menu.ca} name_list_menu={name_list_menu.cate_ca} />

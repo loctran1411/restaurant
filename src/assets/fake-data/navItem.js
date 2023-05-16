@@ -3,7 +3,9 @@ import best_seller_icon from '../icon/best-seller.png'
 // import lobby_icon from '../icon/lift.png'
 import booking_icon from '../icon/restaurant.png'
 import contact_icon from '../icon/contacting.png'
+import menu_icon from '../icon/menu.png'
 import right_arrow from '../icon/right-arrow.png'
+import lobby_icon from '../icon/lobby.png'
 
 import sanh_1 from '../images/sanh-1.jpg'
 import sanh_2 from '../images/sanh-2.jpg'
@@ -24,27 +26,34 @@ export const navItem = [
         href: "#mon-ban-chay",
         alt: "best-seller"
     },
-    // {
-    //     id: 3,
-    //     name: "Sảnh tiệc",
-    //     icon: lobby_icon,
-    //     href: "#sanh-tiec",
-    //     alt: "lobby"
-    // },
+    {
+        id: 3,
+        name: "Thực đơn",
+        icon: menu_icon,
+        href: "#thuc-don",
+        alt: "menu"
+    },
     {
         id: 4,
+        name: "Sảnh tiệc",
+        icon: lobby_icon,
+        href: "#sanh-tiec",
+        alt: "lobby"
+    },
+    {
+        id: 5,
         name: "Đặt bàn",
         icon: booking_icon,
         href: "#dat-ban",
         alt: "booking"
     },
     {
-        id: 5,
+        id: 6,
         name: "Liên hệ",
         icon: contact_icon,
         href: "#lien-he",
         alt: "contact"
-    },
+    }
 ]
 
 export const dropdownNavbar = [

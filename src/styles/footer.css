@@ -47,6 +47,10 @@
   color: #338fff;
 }
 
+.deliver__time-list{
+  padding-top: 40px;
+}
+
 .newsletter {
   padding: 5px;
   border: 1px solid #212245;
@@ -95,7 +99,7 @@
 
 .copyright__text a:hover{
   font-weight: bold;
-  color: #df2020;
+  color: #2e3131;
   text-decoration: underline;
 }
 
