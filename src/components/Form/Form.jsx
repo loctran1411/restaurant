@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
-import DatePicker, {registerLocale } from "react-datepicker"
+import DatePicker, { registerLocale } from "react-datepicker"
 import vn from "date-fns/locale/vi";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../styles/form.css";
@@ -12,10 +12,8 @@ const Form = () => {
     const initialValues = { name: "", phone: "", numberof: "", note: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
-
     const currentDate = new Date();
     const [startDate, setStartDate] = useState(currentDate);
-
     const [loading, setLoading] = useState(false)
 
     //handleChange
@@ -29,23 +27,16 @@ const Form = () => {
         e.preventDefault();
         setLoading(true);
 
-        const day = startDate.getDate();
-        const month = startDate.getMonth();
-        const year = startDate.getFullYear();
-        const hour = startDate.getHours();
-        const minute = startDate.getMinutes();
-        const second = startDate.getSeconds();
-        const formatDateTime = day + "-" + month + "-" + year + " / " + hour + ":" + minute + ":" + second;
-
         // our object to pass
         setFormErrors(validate(formValues));
         const data = {
             TEN_KH: formValues.name,
             SDT: formValues.phone,
             SO_LUONG_KH: formValues.numberof,
-            NGAY_GIO: formatDateTime,
+            NGAY_GIO: startDate.toLocaleString(),
             GHI_CHU: formValues.note
         }
+        // console.log('data',data);
         if (formValues.name !== '' && formValues.phone !== '' && formValues.numberof !== '' && formValues.note === '') {
             axios.post('https://sheet.best/api/sheets/820aee89-edd8-4335-a026-08e695898298', data).then(response => {
                 setTimeout(() => {
@@ -135,7 +126,6 @@ const Form = () => {
                                     timeIntervals={15}
                                     minDate={new Date()}
                                     className='inp'
-                                    locale="vi"
                                     name="datetime" id="date"
                                 />
                             </div>
