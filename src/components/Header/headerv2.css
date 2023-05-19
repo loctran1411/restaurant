@@ -43,6 +43,7 @@ ul {
   margin-left: 30px;
   position: relative;
   color: #ffffff;
+  top: 10px;
 }
 
 .header .menu>.menu-item>a {
@@ -331,7 +332,7 @@ ul {
 
 @media(min-width: 768px) {
   .header-main {
-    padding: 10px 0;
+    padding: 0;
   }
 
   .header .logo .logo_img {

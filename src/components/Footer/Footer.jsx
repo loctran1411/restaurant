@@ -42,7 +42,7 @@ const Footer = () => {
                   </ListGroupItem>
                   <ListGroupItem className=" delivery__time-item border-0 ps-0">
                     <span>Điện thoại: </span>
-                    <p>{i.hotline}</p>
+                    <p><a href={`tel:${i.hotline}`} className="quick-tell">{i.hotline}</a></p>
                   </ListGroupItem>
                 </ListGroup>
               </Col>
