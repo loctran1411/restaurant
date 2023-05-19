@@ -13,7 +13,12 @@
 
 /* base style */
 
+html {
+  height: 94%;
+}
+
 body {
+  min-height: 93%;
   background: #fcfcfc;
   /* font-family: 'Shantell Sans', cursive; */
   /* font-family: 'Castoro Titling', cursive; */
