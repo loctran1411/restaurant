@@ -108,6 +108,18 @@
     font-weight: bold;
 }
 
+@media(min-width: 1920px) {
+    .react-datepicker-popper[data-placement^=top] {
+        transform: translate3d(97.6667px, 3946.17px, 0px) !important;
+    }
+}
+
+@media(max-width: 1280px) {
+    .react-datepicker-popper[data-placement^=top] {
+        transform: translate3d(98.6667px, 3946.17px, 0px) !important;
+    }
+}
+
 @media(max-width: 992px) {
     .react-datepicker-popper[data-placement^=top] {
         /* transform: translate3d(85.6667px, 3993.17px, 0px) !important; */
