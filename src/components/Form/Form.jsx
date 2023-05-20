@@ -1,11 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
-import DatePicker, { registerLocale } from "react-datepicker"
-import vn from "date-fns/locale/vi";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../styles/form.css";
 import axios from 'axios'
-registerLocale("vi", vn);
 
 const Form = () => {
     // form states
@@ -14,6 +11,7 @@ const Form = () => {
     const [formErrors, setFormErrors] = useState({});
 
     const [startDate, setStartDate] = useState("");
+    const today = new Date().toISOString().slice(0, 16);
     const [loading, setLoading] = useState(false)
 
     //handleChange
@@ -134,22 +132,10 @@ const Form = () => {
                             </div>
                             <div className="form-inp-item">
                                 <label className="form-inp-label" htmlFor="date">Ngày</label>
-                                <input defaultValue={formValues.dateTime} onChange={handleChange} type="datetime-local" className='inp' name="dateTime" id="date" />
+                                <input defaultValue={formValues.dateTime} onChange={handleChange} type="datetime-local" className='inp' name="dateTime" id="date" min={today}/>
                                 {
                                     formErrors.dateTime && (<p className='error-valid-form'>*{formErrors.dateTime}</p>)
                                 }
-                                {/* <DatePicker
-                                    selected={startDate}
-                                    onChange={(date) => setStartDate(date)}
-                                    timeInputLabel="Time:"
-                                    dateFormat="dd/MM/yyyy h:mm aa"
-                                    showTimeSelect
-                                    timeFormat="p"
-                                    timeIntervals={15}
-                                    minDate={new Date()}
-                                    className='inp'
-                                    name="datetime" id="date"
-                                /> */}
                             </div>
 
                             <div className="form-inp-item">
