@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import DatePicker, { registerLocale } from "react-datepicker"
 import vn from "date-fns/locale/vi";
@@ -9,11 +9,11 @@ registerLocale("vi", vn);
 
 const Form = () => {
     // form states
-    const initialValues = { name: "", phone: "", numberof: "", note: "" };
+    const initialValues = { name: "", phone: "", numberof: "", dateTime: "" };
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
-    const currentDate = new Date();
-    const [startDate, setStartDate] = useState(currentDate);
+
+    const [startDate, setStartDate] = useState("");
     const [loading, setLoading] = useState(false)
 
     //handleChange
@@ -33,11 +33,11 @@ const Form = () => {
             TEN_KH: formValues.name,
             SDT: formValues.phone,
             SO_LUONG_KH: formValues.numberof,
-            NGAY_GIO: startDate.toLocaleString(),
-            GHI_CHU: formValues.note
+            NGAY_GIO: startDate,
+            GHI_CHU: formValues.note ? formValues.note : ""
         }
-        // console.log('data',data);
-        if (formValues.name !== '' && formValues.phone !== '' && formValues.numberof !== '' && formValues.note === '') {
+
+        if (formValues.name !== '' && (formValues.phone !== '' && formValues.phone.length <= 10) && formValues.numberof !== '' && formValues.dateTime !== '') {
             axios.post('https://sheet.best/api/sheets/820aee89-edd8-4335-a026-08e695898298', data).then(response => {
                 setTimeout(() => {
                     alert("Gửi thành công, Chúng tôi sẽ liên hệ đến bạn")
@@ -52,9 +52,9 @@ const Form = () => {
             })
         }
         else {
-            alert("Vui lòng điền đầy đủ các thông tin!")
+            alert("Vui lòng điền đầy đủ hoặc kiểm tra lại các thông tin!")
+            // console.log("Vui lòng điền đầy đủ các thông tin!");
             setLoading(false)
-            console.log('Không gửi form');
         }
     }
 
@@ -66,11 +66,29 @@ const Form = () => {
         if (!values.phone) {
             errors.phone = "Vui lòng nhập số điện thoại";
         }
+        if (values.phone.length > 10) {
+            errors.phone = "Số điện thoại 10 kí tự";
+        }
         if (!values.numberof) {
             errors.numberof = "Vui lòng nhập số lượng";
         }
+        if (!values.dateTime) {
+            errors.dateTime = "Vui lòng chọn thời gian";
+        }
         return errors;
     };
+
+    useEffect(() => {
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function handleClick() {
+            const dateInput = document.getElementById('date');
+            if (!dateInput.value) {
+                setStartDate('')
+            } else {
+                setStartDate(dateInput.value)
+            }
+        });
+    }, [])
 
     return (
         <Container>
@@ -116,7 +134,11 @@ const Form = () => {
                             </div>
                             <div className="form-inp-item">
                                 <label className="form-inp-label" htmlFor="date">Ngày</label>
-                                <DatePicker
+                                <input defaultValue={formValues.dateTime} onChange={handleChange} type="datetime-local" className='inp' name="dateTime" id="date" />
+                                {
+                                    formErrors.dateTime && (<p className='error-valid-form'>*{formErrors.dateTime}</p>)
+                                }
+                                {/* <DatePicker
                                     selected={startDate}
                                     onChange={(date) => setStartDate(date)}
                                     timeInputLabel="Time:"
@@ -127,11 +149,11 @@ const Form = () => {
                                     minDate={new Date()}
                                     className='inp'
                                     name="datetime" id="date"
-                                />
+                                /> */}
                             </div>
 
                             <div className="form-inp-item">
-                                <label className="form-inp-label" htmlFor="note">Yêu cầu khác</label>
+                                <label className="form-inp-label" htmlFor="note">Yêu cầu khác (Không bắt buộc)</label>
                                 <textarea className='inp' id="note" cols="10" rows="10" placeholder="Nhập yêu cầu"
                                     name="note"
                                     value={formValues.note}
@@ -139,7 +161,7 @@ const Form = () => {
                                 ></textarea>
                             </div>
 
-                            <input className='btn-submit' name="Name" type="submit" value={loading ? "Vui lòng chờ..." : "Gửi"} />
+                            <input id='btn' className='btn-submit' name="Name" type="submit" value={loading ? "Vui lòng chờ..." : "Gửi"} />
                         </form>
                     </Container>
                 </Col>
