@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
-import "react-datepicker/dist/react-datepicker.css";
 import "../../styles/form.css";
 import axios from 'axios'
 
