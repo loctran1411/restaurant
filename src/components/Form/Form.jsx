@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import "../../styles/form.css";
 import axios from 'axios'
+import Swal from 'sweetalert2';
+
 
 const Form = () => {
     // form states
@@ -37,20 +39,31 @@ const Form = () => {
         if (formValues.name !== '' && (formValues.phone !== '' && formValues.phone.length <= 10) && formValues.numberof !== '' && formValues.dateTime !== '') {
             axios.post('https://sheet.best/api/sheets/820aee89-edd8-4335-a026-08e695898298', data).then(response => {
                 setTimeout(() => {
-                    alert("Gửi thành công, Chúng tôi sẽ liên hệ đến bạn")
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Xin cảm ơn',
+                        text: 'Đã gửi thành công, chúng tôi sẽ liên hệ đến bạn',
+                    })
                     e.target.reset();
                     setFormValues("");
                     setLoading(false)
-                    window.location.reload();
-                }, 3000);
+                    // window.location.reload();
+                }, 2000);
             }).catch((err) => {
-                alert("Gửi thất bại")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Rất tiếc',
+                    text: 'Đã có lỗi xảy ra, vui lòng kiểm tra lại thông tin hoặc thử lại sau',
+                })
                 console.log(err);
             })
         }
         else {
-            alert("Vui lòng điền đầy đủ hoặc kiểm tra lại các thông tin!")
-            // console.log("Vui lòng điền đầy đủ các thông tin!");
+            Swal.fire({
+                icon: 'warning',
+                title: 'Thông báo',
+                text: 'Vui lòng điền đầy đủ hoặc kiểm tra lại các thông tin!',
+            })
             setLoading(false)
         }
     }
@@ -131,7 +144,7 @@ const Form = () => {
                             </div>
                             <div className="form-inp-item">
                                 <label className="form-inp-label" htmlFor="date">Ngày</label>
-                                <input defaultValue={formValues.dateTime} onChange={handleChange} type="datetime-local" className='inp' name="dateTime" id="date" min={today}/>
+                                <input defaultValue={formValues.dateTime} onChange={handleChange} type="datetime-local" className='inp' name="dateTime" id="date" min={today} />
                                 {
                                     formErrors.dateTime && (<p className='error-valid-form'>*{formErrors.dateTime}</p>)
                                 }

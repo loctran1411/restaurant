@@ -9,7 +9,7 @@ const data = [
         subtitle: 'NHAHANGYENLONGHAI --- Ẩm thực Châu Á',
         address: '1103-1105-1107-1109 Đường Võ Thị Sáu, khu phố Hải Tân, thị trấn Long Hải, Long Điền, BR-VT',
         intro_lobby_title:'Sảnh tiệc',
-        intro_lobby:'Trọn vẹn không gian, ẩm thực và trải nghiệm với nhà hàng Yến Long Hải nhuốm trọn bởi màu của thời gian , view biển mát mẻ chill chill ngắm trọn hoàng hôn , gần gũi và riêng tư có sức chứa hơn 500 khách , đầy đủ chỗ ngồi ưng ý cho bạn lựa chọn',
+        intro_lobby:'Trọn vẹn không gian, ẩm thực và trải nghiệm với nhà hàng Yến Long Hải nhuốm trọn bởi màu của thời gian , view biển mát mẻ chill chill ngắm trọn hoàng hôn , gần gũi và riêng tư có sức chứa hơn 500 khách , đầy đủ chỗ ngồi ưng ý cho bạn lựa chọn.',
     }
 ]
 

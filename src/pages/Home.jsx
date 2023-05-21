@@ -99,7 +99,7 @@ const Home = () => {
                   <div className="hero__content" key={index}>
                     <h5 className='hero__content-lobby-title'>{t('info.intro_lobby_title')}</h5>
                     <ul className="hero__content-info">
-                      <li className="hero__content-info-lobby">{i.intro_lobby}</li>
+                      <li className="hero__content-info-lobby">&#10024;{i.intro_lobby}</li>
                     </ul>
 
                     <div className="hero__btns d-flex align-items-center gap-5">
