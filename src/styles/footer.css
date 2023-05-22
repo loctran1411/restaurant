@@ -1,7 +1,7 @@
 .footer {
   padding-top: 50px;
   padding-bottom: 30px;
-  background: #5f5f5f;
+  background: #2d5c7f;
 }
 
 .footer__logo img {
@@ -13,12 +13,12 @@
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #e7b451;
+  color: #ffa800;
 }
 
 .footer__logo p {
   font-size: 0.9rem;
-  color: #e7b451;
+  color: #ffa800;
   line-height: 28px;
   font-weight: 500;
 }

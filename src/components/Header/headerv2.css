@@ -19,7 +19,7 @@ ul {
 }
 
 .header-main {
-  background: #2e3131;
+  background: #2d5c7f;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -42,7 +42,7 @@ ul {
   display: inline-block;
   margin-left: 30px;
   position: relative;
-  color: #ffffff;
+  color: #ffa800;
   top: 10px;
 }
 
@@ -56,8 +56,10 @@ ul {
 }
 
 .header .menu>.menu-item>a:hover {
-  background: #ffffff;
+  background: #fbe5c7;
   border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .header .menu>.menu-item>a .plus {

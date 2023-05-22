@@ -4,7 +4,6 @@ import "../../styles/form.css";
 import axios from 'axios'
 import Swal from 'sweetalert2';
 
-
 const Form = () => {
     // form states
     const initialValues = { name: "", phone: "", numberof: "", dateTime: "" };
@@ -21,6 +20,14 @@ const Form = () => {
         setFormValues({ ...formValues, [name]: value });
     };
 
+    // const handleChangePhone = (e) => {
+    //     const { name, value } = e.target;
+    //     setFormValues({ ...formValues, [name]: value });
+
+    //     const valueInp = e.target.value;
+    //     console.log(!isNaN(+valueInp));
+    // };
+
     // submit event
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,6 +35,7 @@ const Form = () => {
 
         // our object to pass
         setFormErrors(validate(formValues));
+        // setFormErrors(validate_phoneNumber(formValues));
         const data = {
             TEN_KH: formValues.name,
             SDT: formValues.phone,
@@ -36,7 +44,7 @@ const Form = () => {
             GHI_CHU: formValues.note ? formValues.note : ""
         }
 
-        if (formValues.name !== '' && (formValues.phone !== '' && formValues.phone.length <= 10) && formValues.numberof !== '' && formValues.dateTime !== '') {
+        if (formValues.name !== '' && formValues.phone !== '' && formValues.numberof !== '' && formValues.dateTime !== '') {
             axios.post('https://sheet.best/api/sheets/820aee89-edd8-4335-a026-08e695898298', data).then(response => {
                 setTimeout(() => {
                     Swal.fire({
@@ -70,8 +78,15 @@ const Form = () => {
 
     const validate = (values) => {
         const errors = {};
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         if (!values.name) {
             errors.name = "Vui lòng nhập tên";
+        }
+        if (isNaN(values.phone)) {
+            errors.phone = "Lỗi nhập sdt";
+        }
+        if(!regex.test(values.phone)){
+            errors.phone = "Số điện thoại không nhập kí tự";
         }
         if (!values.phone) {
             errors.phone = "Vui lòng nhập số điện thoại";
@@ -81,6 +96,9 @@ const Form = () => {
         }
         if (!values.numberof) {
             errors.numberof = "Vui lòng nhập số lượng";
+        }
+        if(!regex.test(values.numberof)){
+            errors.numberof = "Số lượng không nhập kí tự";
         }
         if (!values.dateTime) {
             errors.dateTime = "Vui lòng chọn thời gian";
@@ -146,8 +164,9 @@ const Form = () => {
                             </div>
                             <div className="form-inp-item">
                                 <label htmlFor="phone" className="form-inp-label">Số điện thoại</label>
-                                <input className='inp' placeholder="Nhập số điện thoại" type="number" id="phone"
+                                <input className='inp' placeholder="Nhập số điện thoại" type="text" id="phone"
                                     name="phone"
+                                    maxLength="10"
                                     value={formValues.phone}
                                     onChange={handleChange}
                                 />
