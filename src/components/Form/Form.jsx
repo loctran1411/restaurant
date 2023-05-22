@@ -79,27 +79,18 @@ const Form = () => {
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        const regexNumberof = /^(?:(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))|(?:0|(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))))(?:.\d+|)$/;
+        const validPhone = /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/
         if (!values.name) {
             errors.name = "Vui lòng nhập tên";
         }
-        if (isNaN(values.phone)) {
-            errors.phone = "Lỗi nhập sdt";
-        }
-        if(!regex.test(values.phone)){
-            errors.phone = "Số điện thoại không nhập kí tự";
-        }
-        if (!values.phone) {
+        if (!values.phone || regex.test(values.phone) || isNaN(values.phone) || !validPhone.test(values.phone)) {
             errors.phone = "Vui lòng nhập số điện thoại";
         }
-        if (values.phone.length > 10) {
-            errors.phone = "Số điện thoại 10 kí tự";
-        }
-        if (!values.numberof) {
+        if (!values.numberof || !regexNumberof.test(values.numberof)) {
             errors.numberof = "Vui lòng nhập số lượng";
         }
-        if(!regex.test(values.numberof)){
-            errors.numberof = "Số lượng không nhập kí tự";
-        }
+
         if (!values.dateTime) {
             errors.dateTime = "Vui lòng chọn thời gian";
         }
@@ -169,6 +160,8 @@ const Form = () => {
                                     maxLength="10"
                                     value={formValues.phone}
                                     onChange={handleChange}
+                                // pattern="(0+)\d+" 
+                                // title="Vui lòng nhập số điện thoại"
                                 />
                                 {
                                     formErrors.phone && (<p className='error-valid-form'>*{formErrors.phone}</p>)
