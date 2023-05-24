@@ -1,7 +1,7 @@
 .footer {
   padding-top: 50px;
   padding-bottom: 30px;
-  background: #2d5c7f;
+  background: linear-gradient(90deg, rgb(37 36 54) 0%, rgb(24 24 128) 40%, rgb(87 12 137) 100%);
 }
 
 .footer__logo img {

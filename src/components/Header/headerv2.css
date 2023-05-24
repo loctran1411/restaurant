@@ -19,7 +19,7 @@ ul {
 }
 
 .header-main {
-  background: #2d5c7f;
+  background: linear-gradient(90deg, rgb(37 36 54) 0%, rgb(24 24 128) 40%, rgb(87 12 137) 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -42,7 +42,7 @@ ul {
   display: inline-block;
   margin-left: 30px;
   position: relative;
-  color: #ffa800;
+  color: #fff;
   top: 10px;
 }
 
@@ -56,10 +56,7 @@ ul {
 }
 
 .header .menu>.menu-item>a:hover {
-  background: #fbe5c7;
-  border-radius: 10px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom: 1px solid #ffa800;
 }
 
 .header .menu>.menu-item>a .plus {
@@ -94,8 +91,12 @@ ul {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-.header .menu>.menu-item>.sub-menu>.menu-item>a:hover,
-.header .menu>.menu-item:hover>a {
+.header .menu>.menu-item:hover>a 
+{
+  color: #ffa800;
+}
+.header .menu>.menu-item>.sub-menu>.menu-item>a:hover
+{
   color: #e91e63;
 }
 
