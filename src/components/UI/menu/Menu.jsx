@@ -30,7 +30,7 @@ const Menu = () => {
     }
 
     return (
-        <section>
+        <>
             <h2 className="menu__title">Món bán chạy &#128220;</h2>
             <Container>
                 <Row>
@@ -64,7 +64,7 @@ const Menu = () => {
 
                 </Row>
             </Container>
-        </section>
+        </>
     )
 }
 

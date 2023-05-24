@@ -1,24 +1,5 @@
-/* .feature_hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.feature_hero img{
-  position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    opacity: 0.6;
-    object-fit: fill;
-    background-repeat: no-repeat;
-} */
-
 .hero_info {
   padding: 0;
-  /* z-index: 2;
-  position: relative; */
 }
 
 .hero {
@@ -51,144 +32,31 @@
   padding: 10px;
 }
 
-.feature__item p {
-  color: #000;
+.section_form {
+  position: relative;
+  overflow: hidden;
 }
 
-.feature__item h5 {
-  color: #e96d00;
-}
-
-.food__category {
-  background: #c2793b;
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px 0px;
-  border-radius: 8px;
-  border: 2px solid white;
-}
-
-.food__category button {
-  border: none;
-  outline: none;
-  padding: 7px 20px;
-  background: transparent;
-  color: #fff;
-}
-
-.food__category button img {
-  width: 20px;
-  height: 20px;
-}
-
-.foodBtnActive {
-  background: #fff !important;
-  border-radius: 5px;
-  color: #df2020 !important;
-}
-
-.parallax {
-  background-image: url("https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.section_form .form {
+  z-index: 2;
   position: relative;
 }
 
-.parallax::before {
-  content: '';
+.section_form img {
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.parallax_content {
-  color: #fff;
-  position: absolute;
-  width: 70%;
   z-index: 1;
-  top: 10%;
-  left: 15%;
-}
-
-.parallax_content-title {
-  display: flex;
-  justify-content: center;
-}
-
-.parallax_content-item {
-  border: 1px solid;
-  padding: 10px;
-  margin: 10px;
-}
-
-.tasty__treat-title span {
-  color: #e96d00;
-}
-
-.tasty__treat-desc {
-  color: #000;
-  line-height: 28px;
-}
-
-.list-group .list-group-item {
-  background: #2e3131;
-  color: white;
-  margin: 5px;
-  /* border: 2px solid white !important; */
-  border-radius: 20px;
-}
-
-.choose__us-title {
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.choose__us-title i {
-  font-weight: 500 !important;
-  color: #e7b451;
-}
-
-.choose__us-desc {
-  color: #fff;
-  padding: 0 0 0 10px;
-}
-
-.align-items-center {
-  padding: 5px;
-}
-
-.testimonial__subtitle {
-  color: #e7b451;
-}
-
-.testimonial__title span {
-  color: #e96d00;
-}
-
-.testimonial__desc {
-  color: #000;
-  line-height: 30px;
+  opacity: 0.6;
+  object-fit: fill;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 992px) {
   .hero {
     flex-direction: column;
-  }
-
-  .parallax {
-    min-height: 400px;
-  }
-
-  .parallax_content {
-    top: 0;
-    left: 0;
-    width: 100%;
   }
 }
 
@@ -215,68 +83,8 @@
     padding: 5px 15px;
     font-size: 0.7rem;
   }
-
-  .hero__service p {
-    font-size: 0.7rem !important;
-  }
-
-  .feature__item h5 {
-    font-size: 0.9rem;
-  }
-
-  .feature__item p {
-    font-size: 0.8rem;
-    margin-bottom: 0;
-  }
-
-  .feature__subtitle {
-    font-size: 1rem;
-  }
-
-  .feature__text {
-    font-size: 0.8rem;
-    margin-bottom: 0;
-  }
-
-  .food__category {
-    padding: 15px;
-  }
-
-  .food__category button {
-    padding: 5px 10px;
-    font-size: 0.7rem;
-  }
-
-  .tasty__treat-desc {
-    font-size: 0.8rem;
-    margin-bottom: 0;
-  }
-
-  .choose__us-title {
-    font-size: 0.8rem;
-  }
-
-  .choose__us-desc {
-    font-size: 0.7rem;
-  }
-
-  .testimonial__subtitle {
-    font-size: 1rem;
-  }
-
-  .testimonial__desc {
-    font-size: 0.8rem;
-  }
-
-  .parallax {
-    min-height: 500px;
-  }
-
-  .parallax_content {
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 13px;
+  .section_form img{
+    object-fit: cover;
   }
 }
 
@@ -299,14 +107,6 @@
 
   .hero__btns {
     justify-content: center;
-  }
-
-  .hero__service {
-    justify-content: center;
-  }
-
-  .why__choose-us {
-    padding-top: 0 !important;
   }
 
   .hero_info {

@@ -35,7 +35,7 @@ const Home = () => {
       <CarouselSlider />
       <section id="gioi-thieu"></section>
 
-      <section className='hero_info'>
+      <div className='hero_info'>
         <Container>
           <div className="hero">
             <div class="hero__content">
@@ -59,14 +59,14 @@ const Home = () => {
             </div>
           </div>
         </Container>
-      </section>
+      </div>
 
-      <div id='mon-ban-chay'></div>
-      <section className="pt-0" >
+      <section id='mon-ban-chay'></section>
+      <div className="pt-0" >
         {/* <Col lg='12' className='text-center'>
         </Col> */}
         <Menu />
-      </section>
+      </div>
 
       <div id='thuc-don' className='menu_section'>
         <h2>Thực đơn</h2>
@@ -91,7 +91,7 @@ const Home = () => {
       </div>
 
       <section id="sanh-tiec"></section>
-      <section className='hero_info'>
+      <div className='hero_info'>
         <Container>
           <div className="hero">
             <div class="hero__content">
@@ -118,10 +118,13 @@ const Home = () => {
             </div>
           </div>
         </Container>
-      </section>
+      </div>
 
-      <section id="dat-ban">
-        <Form />
+      <section id="dat-ban" className='section_form'>
+        <div className='form'>
+          <Form />
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784_1280.jpg" alt="" />
       </section>
 
     </Helmet>
