@@ -20,14 +20,6 @@ const Form = () => {
         setFormValues({ ...formValues, [name]: value });
     };
 
-    // const handleChangePhone = (e) => {
-    //     const { name, value } = e.target;
-    //     setFormValues({ ...formValues, [name]: value });
-
-    //     const valueInp = e.target.value;
-    //     console.log(!isNaN(+valueInp));
-    // };
-
     // submit event
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,58 +27,78 @@ const Form = () => {
 
         // our object to pass
         setFormErrors(validate(formValues));
-        // setFormErrors(validate_phoneNumber(formValues));
         const data = {
             TEN_KH: formValues.name,
-            SDT: formValues.phone,
+            SDT: `(+84) - ${formValues.phone}`,
             SO_LUONG_KH: formValues.numberof,
             NGAY_GIO: startDate,
             GHI_CHU: formValues.note ? formValues.note : ""
         }
 
-        if (formValues.name !== '' && formValues.phone !== '' && formValues.numberof !== '' && formValues.dateTime !== '') {
+        const validPhone = /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/
+
+        if (formValues.name !== '' && (formValues.phone !== '' && validPhone.test(formValues.phone)) && formValues.numberof !== '' && formValues.dateTime !== '') {
+            console.log('success');
             axios.post('https://sheet.best/api/sheets/820aee89-edd8-4335-a026-08e695898298', data).then(response => {
                 setTimeout(() => {
+                    // Swal.fire({
+                    //     icon: 'success',
+                    //     title: 'Xin cảm ơn',
+                    //     text: 'Đã gửi thành công, chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất',
+                    // })
+
                     Swal.fire({
-                        icon: 'success',
                         title: 'Xin cảm ơn',
-                        text: 'Đã gửi thành công, chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất',
+                        text: "Đã gửi thành công, chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất",
+                        icon: 'success',
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'Đóng'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.reload();
+                        }
                     })
+
                     e.target.reset();
-                    setFormValues("");
                     setLoading(false)
-                    // window.location.reload();
-                }, 2000);
+                    setFormValues("");
+                    console.log(data);
+                }, 2000)
+                // window.location.reload();
             }).catch((err) => {
                 Swal.fire({
                     icon: 'error',
                     title: 'Rất tiếc',
                     text: 'Đã có lỗi xảy ra, vui lòng kiểm tra lại thông tin hoặc thử lại sau',
                 })
+                setLoading(false)
                 console.log(err);
             })
         }
         else {
+            console.log('check lai thong tin');
+            setLoading(false)
             Swal.fire({
                 icon: 'warning',
                 title: 'Thông báo',
                 text: 'Vui lòng điền đầy đủ hoặc kiểm tra lại các thông tin!',
             })
-            setLoading(false)
         }
     }
 
     const validate = (values) => {
         const errors = {};
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-        const regexNumberof = /^(?:(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))|(?:0|(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))))(?:.\d+|)$/;
         const validPhone = /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/
+        const regexNumberof = /^(?:(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))|(?:0|(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))))(?:.\d+|)$/;
         if (!values.name) {
             errors.name = "Vui lòng nhập tên";
         }
-        if (!values.phone || regex.test(values.phone) || isNaN(values.phone) || !validPhone.test(values.phone)) {
+
+        if (!values.phone || !isNaN(values.phone) || regex.test(values.phone)) {
             errors.phone = "Vui lòng nhập số điện thoại";
         }
+
         if (!values.numberof || !regexNumberof.test(values.numberof)) {
             errors.numberof = "Vui lòng nhập số lượng";
         }
@@ -160,7 +172,7 @@ const Form = () => {
                                     maxLength="10"
                                     value={formValues.phone}
                                     onChange={handleChange}
-                                // pattern="(0+)\d+" 
+                                // pattern="(0+)\d+"
                                 // title="Vui lòng nhập số điện thoại"
                                 />
                                 {
@@ -173,6 +185,8 @@ const Form = () => {
                                     name="numberof"
                                     value={formValues.numberof}
                                     onChange={handleChange}
+                                // pattern="(0+)\d+"
+                                // title="Vui lòng nhập số lượng"
                                 />
                                 {
                                     formErrors.numberof && (<p className='error-valid-form'>*{formErrors.numberof}</p>)
