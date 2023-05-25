@@ -88,15 +88,21 @@ const Form = () => {
 
     const validate = (values) => {
         const errors = {};
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         const validPhone = /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/
         const regexNumberof = /^(?:(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))|(?:0|(?:[1-9](?:\d{0,2}(?:,\d{3})+|\d*))))(?:.\d+|)$/;
         if (!values.name) {
             errors.name = "Vui lòng nhập tên";
         }
 
-        if (!values.phone || !isNaN(values.phone) || regex.test(values.phone)) {
+        // if (!values.phone || !isNaN(values.phone) || regex.test(values.phone)) {
+        //     errors.phone = "Vui lòng nhập số điện thoại";
+        // }
+        if (!values.phone) {
             errors.phone = "Vui lòng nhập số điện thoại";
+        }
+        if (!validPhone.test(values.phone)) {
+            errors.phone = "Sđt không có dấu";
         }
 
         if (!values.numberof || !regexNumberof.test(values.numberof)) {
