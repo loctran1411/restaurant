@@ -102,7 +102,7 @@ const Form = () => {
             errors.phone = "Vui lòng nhập số điện thoại";
         }
         if (!validPhone.test(values.phone)) {
-            errors.phone = "Sđt không có dấu";
+            errors.phone = "Vui lòng nhập số điện thoại";
         }
 
         if (!values.numberof || !regexNumberof.test(values.numberof)) {
