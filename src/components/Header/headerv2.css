@@ -55,9 +55,9 @@ ul {
   transition: all 0.3s ease;
 }
 
-.header .menu>.menu-item>a:hover {
+/* .header .menu>.menu-item>a:hover {
   border-bottom: 1px solid #ffa800;
-}
+} */
 
 .header .menu>.menu-item>a .plus {
   display: inline-block;

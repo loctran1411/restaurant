@@ -1,11 +1,15 @@
 import nha_hang1 from '../images/nha-hang1.jpg'
 import nha_hang2 from '../images/nha-hang2.jpg'
 import nha_hang3 from '../images/nha-hang3.jpg'
+import nha_hang4 from '../images/nha-hang4.jpg'
+import nha_hang5 from '../images/nha-hang5.jpg'
 
 import sanh_1 from '../images/sanh-1.jpg'
 import sanh_2 from '../images/sanh-2.jpg'
 import sanh_3 from '../images/sanh-3.jpg'
 import sanh_4 from '../images/sanh-4.jpg'
+import sanh_5 from '../images/sanh-5.jpg'
+import sanh_6 from '../images/sanh-6.jpg'
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -24,6 +28,16 @@ export const introSlide = {
     {
       id: uuidv4(),
       src: nha_hang3,
+      alt: 'view'
+    },
+    {
+      id: uuidv4(),
+      src: nha_hang4,
+      alt: 'view'
+    },
+    {
+      id: uuidv4(),
+      src: nha_hang5,
       alt: 'view'
     }
   ],
@@ -46,6 +60,16 @@ export const introSlide = {
     {
       id: uuidv4(),
       src: sanh_4,
+      alt: 'lobby'
+    },
+    {
+      id: uuidv4(),
+      src: sanh_5,
+      alt: 'lobby'
+    },
+    {
+      id: uuidv4(),
+      src: sanh_6,
       alt: 'lobby'
     }
   ],
