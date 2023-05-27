@@ -115,29 +115,29 @@ const Form = () => {
         return errors;
     };
 
-    const handleCancel = () => {
-        Swal.fire({
-            title: 'Hủy đơn',
-            text: "Bạn có chắc hủy đặt bàn?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            cancelButtonText: 'Đóng',
-            confirmButtonText: 'Hủy'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Hủy thành công',
-                    '',
-                    'success'
-                )
-                setTimeout(() => {
-                    window.location.reload();
-                }, 2000)
-            }
-        })
-    }
+    // const handleCancel = () => {
+    //     Swal.fire({
+    //         title: 'Hủy đơn',
+    //         text: "Bạn có chắc hủy đặt bàn?",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         cancelButtonText: 'Đóng',
+    //         confirmButtonText: 'Hủy'
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             Swal.fire(
+    //                 'Hủy thành công',
+    //                 '',
+    //                 'success'
+    //             )
+    //             setTimeout(() => {
+    //                 window.location.reload();
+    //             }, 2000)
+    //         }
+    //     })
+    // }
 
     useEffect(() => {
         const btn = document.getElementById('btn');
@@ -217,7 +217,7 @@ const Form = () => {
 
                             <input id='btn' className='btn-submit' name="Name" type="submit" value={loading ? "Vui lòng đợi..." : "Gửi"} />
 
-                            <input className='btn-cancel' type="button" value="Hủy đơn đặt" onClick={handleCancel} />
+                            {/* <input className='btn-cancel' type="button" value="Hủy đơn đặt" onClick={handleCancel} /> */}
                         </form>
                     </Container>
                 </Col>
