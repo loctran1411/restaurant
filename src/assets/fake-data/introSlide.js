@@ -1,4 +1,3 @@
-import nha_hang1 from '../images/nha-hang1.jpg'
 import nha_hang2 from '../images/nha-hang2.jpg'
 import nha_hang3 from '../images/nha-hang3.jpg'
 import nha_hang4 from '../images/nha-hang4.jpg'
@@ -15,11 +14,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const introSlide = {
   view_restaurant: [
-    {
-      id: uuidv4(),
-      src: nha_hang1,
-      alt: 'view'
-    },
     {
       id: uuidv4(),
       src: nha_hang2,
