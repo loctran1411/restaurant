@@ -39,7 +39,7 @@ const Form = () => {
 
         if (formValues.name !== '' && (formValues.phone !== '' && validPhone.test(formValues.phone)) && formValues.numberof !== '' && formValues.dateTime !== '') {
             console.log('success');
-            axios.post('https://sheet.best/api/sheets/820aee89-edd8-4335-a026-08e695898298', data).then(response => {
+            axios.post('https://sheetdb.io/api/v1/mxocir8iv4z0b', data).then(response => {
                 setTimeout(() => {
                     Swal.fire({
                         title: 'Xin cảm ơn',
