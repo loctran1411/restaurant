@@ -4,7 +4,6 @@ import nha_hang4 from '../images/nha-hang4.jpg'
 import nha_hang5 from '../images/nha-hang5.jpg'
 import nha_hang6 from '../images/nha-hang6.jpg'
 import nha_hang7 from '../images/nha-hang7.jpg'
-import nha_hang8 from '../images/nha-hang8.jpg'
 
 import sanh_1 from '../images/sanh-1.jpg'
 import sanh_2 from '../images/sanh-2.jpg'
@@ -44,11 +43,6 @@ export const introSlide = {
     {
       id: uuidv4(),
       src: nha_hang7,
-      alt: 'view'
-    },
-    {
-      id: uuidv4(),
-      src: nha_hang8,
       alt: 'view'
     }
   ],
