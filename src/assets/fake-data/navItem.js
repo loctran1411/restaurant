@@ -7,9 +7,9 @@ import menu_icon from '../icon/menu.png'
 import right_arrow from '../icon/right-arrow.png'
 import lobby_icon from '../icon/lobby.png'
 
-import sanh_1 from '../images/sanh-1.jpg'
-import sanh_2 from '../images/sanh-2.jpg'
-import sanh_3 from '../images/sanh-3.jpg'
+// import sanh_1 from '../images/sanh-1.jpg'
+// import sanh_2 from '../images/sanh-2.jpg'
+// import sanh_3 from '../images/sanh-3.jpg'
 
 export const navItem = [
     {
@@ -56,23 +56,23 @@ export const navItem = [
     }
 ]
 
-export const dropdownNavbar = [
-    {
-        id: 1,
-        title: "Sảnh 1",
-        img: sanh_1,
-        icon: right_arrow
-    },
-    {
-        id: 2,
-        title: "Sảnh 2",
-        img: sanh_2,
-        icon: right_arrow
-    },
-    {
-        id: 3,
-        title: "Sảnh 3",
-        img: sanh_3,
-        icon: right_arrow
-    }
-]
+// export const dropdownNavbar = [
+//     {
+//         id: 1,
+//         title: "Sảnh 1",
+//         img: sanh_1,
+//         icon: right_arrow
+//     },
+//     {
+//         id: 2,
+//         title: "Sảnh 2",
+//         img: sanh_2,
+//         icon: right_arrow
+//     },
+//     {
+//         id: 3,
+//         title: "Sảnh 3",
+//         img: sanh_3,
+//         icon: right_arrow
+//     }
+// ]

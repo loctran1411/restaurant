@@ -1,66 +1,15 @@
-import nha_hang2 from '../images/nha-hang2.jpg'
-import nha_hang3 from '../images/nha-hang3.jpg'
-import nha_hang4 from '../images/nha-hang4.jpg'
-import nha_hang5 from '../images/nha-hang5.jpg'
-
-import sanh_1 from '../images/sanh-1.jpg'
-import sanh_2 from '../images/sanh-2.jpg'
-import sanh_3 from '../images/sanh-3.jpg'
-import sanh_5 from '../images/sanh-5.jpg'
-import sanh_6 from '../images/sanh-6.jpg'
-
 import { v4 as uuidv4 } from 'uuid';
 
+import mainSlideFiles from '../fake-data/main_slide.json';
+import subSlideFiles from '../fake-data/sub_slide.json';
+
+const mainSlideData = mainSlideFiles.map((f) => ({id: uuidv4(), src: `./slider/main/${f}`, alt: f}));
+
+const subSlideData = subSlideFiles.map((f) => ({id: uuidv4(), src: `./slider/sub/${f}`, alt: f}));
+
 export const introSlide = {
-  view_restaurant: [
-    {
-      id: uuidv4(),
-      src: nha_hang2,
-      alt: 'view'
-    },
-    {
-      id: uuidv4(),
-      src: nha_hang3,
-      alt: 'view'
-    },
-    {
-      id: uuidv4(),
-      src: nha_hang4,
-      alt: 'view'
-    },
-    {
-      id: uuidv4(),
-      src: nha_hang5,
-      alt: 'view'
-    }
-  ],
-  view_lobby: [
-    {
-      id: uuidv4(),
-      src: sanh_1,
-      alt: 'lobby'
-    },
-    {
-      id: uuidv4(),
-      src: sanh_2,
-      alt: 'lobby'
-    },
-    {
-      id: uuidv4(),
-      src: sanh_3,
-      alt: 'lobby'
-    },
-    {
-      id: uuidv4(),
-      src: sanh_5,
-      alt: 'lobby'
-    },
-    {
-      id: uuidv4(),
-      src: sanh_6,
-      alt: 'lobby'
-    }
-  ],
+  view_restaurant: mainSlideData,
+  view_lobby: subSlideData,
   food_slide: [
     {
       id: uuidv4(),
